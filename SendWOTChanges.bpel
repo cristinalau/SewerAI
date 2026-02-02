@@ -930,13 +930,13 @@ try {
                     $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionid
                   </from>
                   <to>
-                    $UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:inspectionid/text()
+                    $UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:inspectionid
                   </to>
                 </copy>
                 <copy>
                   <from>$vFeedStatus</from>
                   <to>
-                    $UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:feedStatus/text()
+                    $UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:feedStatus
                   </to>
                 </copy>
               </assign>
