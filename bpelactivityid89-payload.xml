@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><details>
+   <to-spec>
+<to xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable">
+                    $UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:inspectionid/text()
+                  </to>
+   </to-spec>
+   <variable>
+<UpdateCRInspectStatus_In>
+         <part xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="EpseweraiCrInspectCollection">
+            <EpseweraiCrInspectCollection xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus">
+                        <topUCS:EpseweraiCrInspect>
+                          <topUCS:inspectionid/>
+                          <topUCS:feedStatus/>
+                        </topUCS:EpseweraiCrInspect>
+                      </EpseweraiCrInspectCollection>
+         </part>
+      </UpdateCRInspectStatus_In>
+   </variable>
+   <fault>
+<bpelFault>
+         <faultType>0</faultType>
+         <selectionFailure xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"/>
+      </bpelFault>
+   </fault>
+</details>
