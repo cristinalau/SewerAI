@@ -521,91 +521,22 @@ try {
                       '{',
                         '"items":[{',
                           '"project_sid":"',
-                            normalize-space(string(
-                              $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                                .VCrInspectToSendCollection
-                                /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                                [$i]/topCRI:projectSid
-                            )),
-                          '",',
-                          '"header":{',
-                            '"InspectionID":"',
-                              normalize-space(string(
-                                $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                                  .VCrInspectToSendCollection
-                                  /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                                  [$i]/topCRI:inspectionid
-                              )),
-                            '",',
+                            normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:projectSid)),'",',
+                            '"header":{',
+                            '"InspectionID":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionid)),'",',
                             '"Surveyed_By":"",',
                             '"Certificate_Number":"",',
-                            '"Material":"',
-                              normalize-space(string(
-                                $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                                  .VCrInspectToSendCollection
-                                  /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                                  [$i]/topCRI:material
-                              )),
-                            '",',
+                            '"Material":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:material)),'",',
                             '"Inspection_Status":"",',
-                            '"Upstream_MH":"',
-                              normalize-space(string(
-                                $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                                  .VCrInspectToSendCollection
-                                  /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                                  [$i]/topCRI:upstreamMh
-                              )),
-                            '",',
-                            '"Downstream_MH":"',
-                              normalize-space(string(
-                                $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                                  .VCrInspectToSendCollection
-                                  /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                                  [$i]/topCRI:downstreamMh
-                              )),
-                            '",',
-                            '"Pipe_Segment_Reference":"',
-                              normalize-space(string(
-                                $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                                  .VCrInspectToSendCollection
-                                  /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                                  [$i]/topCRI:pipeSegmentReference
-                              )),
-                            '",',
-                            '"Lateral_Segment_Reference":"',
-                              normalize-space(string(
-                                $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                                  .VCrInspectToSendCollection
-                                  /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                                  [$i]/topCRI:lateralSegmentReference
-                              )),
-                            '",',
+                            '"Upstream_MH":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:upstreamMh)),'",',
+                            '"Downstream_MH":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:downstreamMh)),'",',
+                            '"Pipe_Segment_Reference":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:pipeSegmentReference)),'",',
+                            '"Lateral_Segment_Reference":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:lateralSegmentReference)),'",',
                             '"Access_Point":"",',
-                            '"Manhole_Number":"',
-                              normalize-space(string(
-                                $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                                  .VCrInspectToSendCollection
-                                  /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                                  [$i]/topCRI:manholeNumber
-                              )),
-                            '",',
-                            '"Access_Type":"',
-                              normalize-space(string(
-                                $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                                  .VCrInspectToSendCollection
-                                  /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                                  [$i]/topCRI:accessType
-                              )),
-                            '",',
-                            '"Cover_Shape":"',
-                              normalize-space(string(
-                                $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                                  .VCrInspectToSendCollection
-                                  /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                                  [$i]/topCRI:coverShape
-                              )),
-                            '"',
-                          '}',
+                            '"Manhole_Number":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:manholeNumber)),'",',
+                            '"Access_Type":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType)),'",',
+                            '"Cover_Shape":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:coverShape)),'"',
+                            '}',
                         '}]',
                       '}'
                     )
@@ -633,16 +564,7 @@ try {
                       xmlns:bpelx="http://schemas.oracle.com/bpel/extension">
                 <copy>
                   <from>
-                    concat(
-                      'inspect_', $vProjectSid, '_',
-                      normalize-space(string(
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                          .VCrInspectToSendCollection
-                          /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                          [$i]/topCRI:inspectionid
-                      )),
-                      '.json'
-                    )
+                    concat('inspect_', $vProjectSid, '_',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionid)),'.json')
                   </from>
                   <to>$vOutFileName</to>
                 </copy>
@@ -673,12 +595,7 @@ try {
               <!-- 3.D Route by inspectionType (FOR CURRENT ROW) -->
               <if name="PickEndpointIf">
                 <condition>
-                  normalize-space(string(
-                    $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                      .VCrInspectToSendCollection
-                      /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                      [$i]/topCRI:inspectionType
-                  )) = 'LACP'
+                  normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionType)) = 'LACP'
                 </condition>
                 <sequence>
                   <assign name="BuildLACPRequest" xmlns:bpelx="http://schemas.oracle.com/bpel/extension"
@@ -706,91 +623,61 @@ try {
                     <!-- 2) Map DB → LACP (CURRENT ROW: filtered[$i]) -->
                     <copy>
                       <from>
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                          .VCrInspectToSendCollection
-                          /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                          [$i]/topCRI:projectSid
+                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:projectSid
                       </from>
                       <to>$putVideosLACP_In.request/vl:items/vl:project_sid</to>
                     </copy>
                     <copy>
                       <from>
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                          .VCrInspectToSendCollection
-                          /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                          [$i]/topCRI:inspectionid
+                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionid
                       </from>
                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:InspectionID</to>
                     </copy>
                     <copy>
                       <from>
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                          .VCrInspectToSendCollection
-                          /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                          [$i]/topCRI:material
+                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:material
                       </from>
                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Material</to>
                     </copy>
                     <copy>
                       <from>
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                          .VCrInspectToSendCollection
-                          /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                          [$i]/topCRI:upstreamMh
+                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:upstreamMh
                       </from>
                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Upstream_MH</to>
                     </copy>
                     <copy>
                       <from>
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                          .VCrInspectToSendCollection
-                          /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                          [$i]/topCRI:downstreamMh
+                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:downstreamMh
                       </from>
                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Downstream_MH</to>
                     </copy>
                     <copy>
                       <from>
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                          .VCrInspectToSendCollection
-                          /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                          [$i]/topCRI:pipeSegmentReference
+                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:pipeSegmentReference
                       </from>
                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Pipe_Segment_Reference</to>
                     </copy>
                     <copy>
                       <from>
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                          .VCrInspectToSendCollection
-                          /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                          [$i]/topCRI:lateralSegmentReference
+                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:lateralSegmentReference
                       </from>
                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Lateral_Segment_Reference</to>
                     </copy>
                     <copy>
                       <from>
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                          .VCrInspectToSendCollection
-                          /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                          [$i]/topCRI:manholeNumber
+                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:manholeNumber
                       </from>
                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Manhole_Number</to>
                     </copy>
                     <copy>
                       <from>
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                          .VCrInspectToSendCollection
-                          /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                          [$i]/topCRI:accessType
+                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType
                       </from>
                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Access_Type</to>
                     </copy>
                     <copy>
                       <from>
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                          .VCrInspectToSendCollection
-                          /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                          [$i]/topCRI:coverShape
+                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:coverShape
                       </from>
                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Cover_Shape</to>
                     </copy>
@@ -807,12 +694,7 @@ try {
                 </sequence>
                 <elseif>
                   <condition>
-                    normalize-space(string(
-                      $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                        .VCrInspectToSendCollection
-                        /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                        [$i]/topCRI:inspectionType
-                    )) = 'MACP'
+                    normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionType)) = 'MACP'
                   </condition>
                   <sequence>
                     <assign name="BuildMACPRequest" bpelx:insertMissingToData="yes"
@@ -838,91 +720,61 @@ try {
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:projectSid
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:projectSid
                         </from>
                         <to>$putVideosMACP_In.request/vm:items/vm:project_sid</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:inspectionid
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionid
                         </from>
                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:InspectionID</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:material
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:material
                         </from>
                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Material</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:upstreamMh
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:upstreamMh
                         </from>
                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Upstream_MH</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:downstreamMh
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:downstreamMh
                         </from>
                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Downstream_MH</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:pipeSegmentReference
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:pipeSegmentReference
                         </from>
                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Pipe_Segment_Reference</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:lateralSegmentReference
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:lateralSegmentReference
                         </from>
                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Lateral_Segment_Reference</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:manholeNumber
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:manholeNumber
                         </from>
                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Manhole_Number</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:accessType
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType
                         </from>
                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Access_Type</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:coverShape
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:coverShape
                         </from>
                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Cover_Shape</to>
                       </copy>
@@ -940,12 +792,7 @@ try {
                 </elseif>
                 <elseif>
                   <condition>
-                    normalize-space(string(
-                      $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                        .VCrInspectToSendCollection
-                        /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                        [$i]/topCRI:inspectionType
-                    )) = 'PACP'
+                    normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionType)) = 'PACP'
                   </condition>
                   <sequence>
                     <assign name="BuildPACPRequest" bpelx:insertMissingToData="yes"
@@ -971,91 +818,61 @@ try {
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:projectSid
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:projectSid
                         </from>
                         <to>$putVideosPACP_In.request/vp:items/vp:project_sid</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:inspectionid
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionid
                         </from>
                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:InspectionID</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:material
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:material
                         </from>
                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Material</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:upstreamMh
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:upstreamMh
                         </from>
                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Upstream_MH</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:downstreamMh
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:downstreamMh
                         </from>
                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Downstream_MH</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:pipeSegmentReference
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:pipeSegmentReference
                         </from>
                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Pipe_Segment_Reference</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:lateralSegmentReference
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:lateralSegmentReference
                         </from>
                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Lateral_Segment_Reference</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:manholeNumber
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:manholeNumber
                         </from>
                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Manhole_Number</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:accessType
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType
                         </from>
                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Access_Type</to>
                       </copy>
                       <copy>
                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                            .VCrInspectToSendCollection
-                            /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                            [$i]/topCRI:coverShape
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:coverShape
                         </from>
                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Cover_Shape</to>
                       </copy>
@@ -1081,15 +898,7 @@ try {
                       </copy>
                       <copy>
                         <from>
-                          concat(
-                            'Unknown inspectionType: ',
-                            normalize-space(string(
-                              $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                                .VCrInspectToSendCollection
-                                /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                                [$i]/topCRI:inspectionType
-                            ))
-                          )
+                          concat('Unknown inspectionType: ',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionType)))
                         </from>
                         <to>$vFeedMessage</to>
                       </copy>
@@ -1118,21 +927,16 @@ try {
                 <!-- Populate the values (text nodes) for THIS row -->
                 <copy>
                   <from>
-                    $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable
-                      .VCrInspectToSendCollection
-                      /topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)]
-                      [$i]/topCRI:inspectionid
+                    $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionid
                   </from>
                   <to>
-                    $UpdateCRInspectStatus_In.EpseweraiCrInspectCollection
-                      /topUCS:EpseweraiCrInspect/topUCS:inspectionid/text()
+                    $UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:inspectionid/text()
                   </to>
                 </copy>
                 <copy>
                   <from>$vFeedStatus</from>
                   <to>
-                    $UpdateCRInspectStatus_In.EpseweraiCrInspectCollection
-                      /topUCS:EpseweraiCrInspect/topUCS:feedStatus/text()
+                    $UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:feedStatus/text()
                   </to>
                 </copy>
               </assign>
