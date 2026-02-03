@@ -601,15 +601,15 @@ try {
                               <catchAll>
                                 <sequence>
                                   <assign name="CapturePutVideosFault">
-                                      <copy>
+                                    <copy>
                                       <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">substring(string($fault), 1, 1000)
                                       </from>
                                       <to variable="vPutVideosFault"/>
-                                      </copy>
+                                    </copy>
                                   </assign>
                                   <assign name="SetFeedMessageFromPutVideosFault">
                                     <copy>
-                                      <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('PutVideos failed: http=', $vPutVideosStatusCode,'; fault=', substring($vPutVideosFault, 1, 1000))</from>                                      
+                                      <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('PutVideos failed: http=', $vPutVideosStatusCode,'; fault=', substring($vPutVideosFault, 1, 1000))</from>
                                       <to>$vFeedMessage</to>
                                     </copy>
                                   </assign>
@@ -719,6 +719,12 @@ try {
                                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Cover_Shape</to>
                                     </copy>
                                   </assign>
+                                  <assign name="CleanLACPRequest">
+                                    <copy>
+                                      <from>ora:processXSLT('xsl/StripNilElements.xsl', $putVideosLACP_In.request)</from>
+                                      <to>$putVideosLACP_In.request</to>
+                                    </copy>
+                                  </assign>
                                   <invoke name="InvokePutVideosLACP" partnerLink="SewerAIVideos"
                                           portType="vid:SewerAIVideos_ptt" operation="putVideosLACP"
                                           inputVariable="putVideosLACP_In"
@@ -728,6 +734,7 @@ try {
                                       <bpelx:toProperty name="rest.binding.http.Authorization" variable="vAuth"/>
                                       <bpelx:toProperty name="rest.binding.http.Content-Type" variable="vCT"/>
                                       <bpelx:toProperty name="rest.binding.http.Accept" variable="vAccept"/>
+                                      <bpelx:toProperty name="rest.binding.responseType" variable="vRespType"/>
                                     </bpelx:toProperties>
                                     <bpelx:fromProperties>
                                       <bpelx:fromProperty name="rest.binding.http.statusCode"
@@ -820,6 +827,12 @@ try {
                                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Cover_Shape</to>
                                       </copy>
                                     </assign>
+                                    <assign name="CleanMACPRequest">
+                                      <copy>
+                                        <from>ora:processXSLT('xsl/StripNilElements.xsl', $putVideosMACP_In.request)</from>
+                                        <to>$putVideosMACP_In.request</to>
+                                      </copy>
+                                    </assign>
                                     <invoke name="InvokePutVideosMACP" partnerLink="SewerAIVideos"
                                             portType="vid:SewerAIVideos_ptt" operation="putVideosMACP"
                                             inputVariable="putVideosMACP_In" bpelx:invokeAsDetail="yes"
@@ -828,6 +841,7 @@ try {
                                         <bpelx:toProperty name="rest.binding.http.Authorization" variable="vAuth"/>
                                         <bpelx:toProperty name="rest.binding.http.Content-Type" variable="vCT"/>
                                         <bpelx:toProperty name="rest.binding.http.Accept" variable="vAccept"/>
+                                        <bpelx:toProperty name="rest.binding.responseType" variable="vRespType"/>
                                       </bpelx:toProperties>
                                       <bpelx:fromProperties>
                                         <bpelx:fromProperty name="rest.binding.http.statusCode"
@@ -921,6 +935,12 @@ try {
                                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Cover_Shape</to>
                                       </copy>
                                     </assign>
+                                    <assign name="CleanPACPRequest">
+                                      <copy>
+                                        <from>ora:processXSLT('xsl/StripNilElements.xsl', $putVideosPACP_In.request)</from>
+                                        <to>$putVideosPACP_In.request</to>
+                                      </copy>
+                                    </assign>
                                     <invoke name="InvokePutVideosPACP" partnerLink="SewerAIVideos"
                                             portType="vid:SewerAIVideos_ptt" operation="putVideosPACP"
                                             inputVariable="putVideosPACP_In" bpelx:invokeAsDetail="yes"
@@ -929,6 +949,7 @@ try {
                                         <bpelx:toProperty name="rest.binding.http.Authorization" variable="vAuth"/>
                                         <bpelx:toProperty name="rest.binding.http.Content-Type" variable="vCT"/>
                                         <bpelx:toProperty name="rest.binding.http.Accept" variable="vAccept"/>
+                                        <bpelx:toProperty name="rest.binding.responseType" variable="vRespType"/>
                                       </bpelx:toProperties>
                                       <bpelx:fromProperties>
                                         <bpelx:fromProperty name="rest.binding.http.statusCode"
