@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="UTF-8"?><audit_trail flowId="840129" cid="bpel:851769">
+<event date="2026-02-03T14:23:39.422-07:00" cat="2" type="2" n="0" sid="0">
+      <message>New instance of BPEL process "1.0" initiated (# "SendWOTChanges").</message>
+   </event>
+   <event date="2026-02-03T14:23:39.423-07:00" cat="1" psid="0" label="process" type="2" n="1" sid="BpPrc0.1">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:39.423-07:00" cat="1" psid="BpPrc0.1" label="tryBlock of process (37)" type="2" n="2" sid="BpTry0.2">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:39.423-07:00" cat="1" psid="BpTry0.2" label="Main (118)" type="2" n="3" sid="BpSeq0.3">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:39.423-07:00" wikey="851769-BpRcv0-BpSeq0.3-1" cat="2" label="receiveFromDB" state="5" type="2" n="4" sid="BpSeq0.3">
+      <message>Received "receive" call from partner "ReadWOTSewerAIData"</message>
+      <details>
+&lt;inputVariableWOT&gt;&lt;part name="EpseweraiWotStg1Collection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiWotStg1Collection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/ReadWOTSewerAIData"&gt;&lt;EpseweraiWotStg1&gt;&lt;taskUuid&gt;bKoc9ckriEqDEK6wIhE2ew==&lt;/taskUuid&gt;&lt;wotasktitle&gt;Testing 2.1 - Ivara put video via API call&lt;/wotasktitle&gt;&lt;plndcompdateDttm&gt;2026-03-06T16:07:41.000-07:00&lt;/plndcompdateDttm&gt;&lt;plndstrtdateDttm&gt;2026-02-03T16:07:41.000-07:00&lt;/plndstrtdateDttm&gt;&lt;workclassifiOi&gt;211&lt;/workclassifiOi&gt;&lt;feedStatus&gt;UPDATED&lt;/feedStatus&gt;&lt;/EpseweraiWotStg1&gt;&lt;/EpseweraiWotStg1Collection&gt;&lt;/part&gt;&lt;/inputVariableWOT&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.423-07:00" cat="1" psid="BpSeq0.3" label="EncodeAndInvoke (122)" type="2" n="5" sid="BpScp0.4">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:39.423-07:00" cat="1" psid="BpScp0.4" label="tryBlock of scope EncodeAndInvoke (122)" type="2" n="6" sid="BpTry1.5">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:39.423-07:00" cat="1" psid="BpTry1.5" label="sequence (134)" type="2" n="7" sid="BpSeq2.6">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:39.423-07:00" wikey="851769-BxExe1-BpSeq2.6-1" cat="3" label="EncodeAndSetOpaquePayload" type="2" n="8" sid="BpSeq2.6">
+      <message>EncodeAndSetOpaquePayload (SewerAI payload; date mappings applied) started.</message>
+   </event>
+   <event date="2026-02-03T14:23:39.433-07:00" wikey="851769-BxExe1-BpSeq2.6-1" cat="3" label="EncodeAndSetOpaquePayload" type="2" n="9" sid="BpSeq2.6">
+      <message>Resolved projectSid=6caa1cf5-c92b-884a-8310-aeb02211367b</message>
+   </event>
+   <event date="2026-02-03T14:23:39.435-07:00" wikey="851769-BxExe1-BpSeq2.6-1" cat="3" label="EncodeAndSetOpaquePayload" type="2" n="10" sid="BpSeq2.6">
+      <message>Opaque payload generated and Base64 encoded.</message>
+   </event>
+   <event date="2026-02-03T14:23:39.435-07:00" wikey="851769-BxExe1-BpSeq2.6-1" cat="2" label="EncodeAndSetOpaquePayload" state="5" type="2" n="11" sid="BpSeq2.6">
+      <message>bpelx:exec executed</message>
+   </event>
+   <event date="2026-02-03T14:23:39.436-07:00" wikey="851769-BpInv0-BpSeq2.6-2" cat="2" label="writeOpaque" state="1" type="2" n="12" sid="BpSeq2.6">
+      <message>Started invocation of operation "Write" on partner "ExportWOTUpdate_sp".</message>
+   </event>
+   <event date="2026-02-03T14:23:39.445-07:00" wikey="851769-BpInv0-BpSeq2.6-2" partnerWSDL="" cat="2" label="writeOpaque" state="5" type="2" n="13" sid="BpSeq2.6">
+      <message>Invoked 1-way operation "Write" on partner "ExportWOTUpdate_sp".</message>
+      <details>
+&lt;fileWriteRequest&gt;&lt;part name="opaque" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;opaqueElement xmlns="http://xmlns.oracle.com/pcbpel/adapter/opaque/"&gt;eyJzaWQiOiI2Y2FhMWNmNS1jOTJiLTg4NGEtODMxMC1hZWIwMjIxMTM2N2IiLCJhY2NvdW50Ijp7InNpZCI6ImEyZWRjM2E3LTgyYjktNGE5Zi1iYTYxLTA5YTU4NTkwZGZiMCJ9LCJuYW1lIjoiVGVzdGluZyAyLjEgLSBJdmFyYSBwdXQgdmlkZW8gdmlhIEFQSSBjYWxsIiwic3RhdHVzIjoiYWN0aXZlIiwiZ29hbF9zdGF0ZSI6ImF1dG9jb2RlX2NvbXBsZXRlIiwibm90ZXMiOiJDcmVhdGVkIGJ5IEFQSSB0ZXN0IHNjcmlwdCIsInBhY3BfcHJvamVjdF9zcGVjIjp7InNpZCI6ImY2NzY5ZTcyLTQxMWYtNDA0My05NWU3LTgwNWRkZWYxMjQ5ZiJ9LCJsYWNwX3Byb2plY3Rfc3BlYyI6eyJzaWQiOiI5MjBkZDM2OC1hMjc2LTRiNzMtYjYyOS03MjFjYWRmODQyYzQifSwibWFjcF9wcm9qZWN0X3NwZWMiOnsic2lkIjoiNDE5YTQyYTQtYWUyYy00MzViLTkzNjAtYzk5MzM0Y2NkNTY3In0sInJ1bl9hdXRvY29kZV9vbl91cGxvYWQiOmZhbHNlLCJkYXRlX3N0YXJ0ZWQiOiIyMDI2LTAyLTAzVDE2OjA3OjQxLTA3OjAwIiwiZXN0aW1hdGVkX2NvbXBsZXRpb25fZGF0ZSI6IjIwMjYtMDMtMDZUMTY6MDc6NDEtMDc6MDAiLCJkYXRlX2R1ZSI6IjIwMjYtMDMtMDZUMTY6MDc6NDEtMDc6MDAiLCJkYXRlX2ZpbmlzaGVkIjpudWxsLCJwYWNwX2V4cGVjdGVkX2luc3BlY3Rpb25fY291bnQiOjAsInBhY3BfZXhwZWN0ZWRfbGluZWFyX2ZlZXQiOjAsImxhY3BfZXhwZWN0ZWRfaW5zcGVjdGlvbl9jb3VudCI6MCwibGFjcF9leHBlY3RlZF9saW5lYXJfZmVldCI6MCwibWFjcF9leHBlY3RlZF9pbnNwZWN0aW9uX2NvdW50IjowLCJtYWNwX2V4cGVjdGVkX2xpbmVhcl9mZWV0IjowfQ==&lt;/opaqueElement&gt;&lt;/part&gt;&lt;/fileWriteRequest&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss0-BpSeq2.6-3" cat="2" to="vHeadersJson" label="BuildHeadersJson" state="1" type="1" n="14" sid="BpSeq2.6">
+      <message>Updated variable "vHeadersJson"</message>
+      <details>
+&lt;vHeadersJson&gt;&lt;vHeadersJson xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;{"Authorization":"X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d","Content-Type":"application/json"}&lt;/vHeadersJson&gt;&lt;/vHeadersJson&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss0-BpSeq2.6-3" cat="2" label="BuildHeadersJson" state="5" type="1" n="15" sid="BpSeq2.6">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss1-BpSeq2.6-4" cat="2" to="vAuth" label="SetAuth" state="1" type="1" n="16" sid="BpSeq2.6">
+      <message>Updated variable "vAuth"</message>
+      <details>
+&lt;vAuth&gt;&lt;vAuth&gt;X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d&lt;/vAuth&gt;&lt;/vAuth&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss1-BpSeq2.6-4" cat="2" to="vCT" label="SetAuth" state="1" type="1" n="17" sid="BpSeq2.6">
+      <message>Updated variable "vCT"</message>
+      <details>
+&lt;vCT&gt;&lt;vCT&gt;application/json&lt;/vCT&gt;&lt;/vCT&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss1-BpSeq2.6-4" cat="2" to="vAccept" label="SetAuth" state="1" type="1" n="18" sid="BpSeq2.6">
+      <message>Updated variable "vAccept"</message>
+      <details>
+&lt;vAccept&gt;&lt;vAccept xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;application/json&lt;/vAccept&gt;&lt;/vAccept&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss1-BpSeq2.6-4" cat="2" to="vRespType" label="SetAuth" state="1" type="1" n="19" sid="BpSeq2.6">
+      <message>Updated variable "vRespType"</message>
+      <details>
+&lt;vRespType&gt;&lt;vRespType xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;empty&lt;/vRespType&gt;&lt;/vRespType&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss1-BpSeq2.6-4" cat="2" label="SetAuth" state="5" type="1" n="20" sid="BpSeq2.6">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="21" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid/&gt;&lt;/account&gt;&lt;name/&gt;&lt;status/&gt;&lt;goal_state/&gt;&lt;notes/&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="22" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name/&gt;&lt;status/&gt;&lt;goal_state/&gt;&lt;notes/&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="23" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status/&gt;&lt;goal_state/&gt;&lt;notes/&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="24" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state/&gt;&lt;notes/&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="25" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes/&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.446-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="26" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid/&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="27" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid/&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="28" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid/&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="29" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload/&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="30" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started/&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="31" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-02-03T16:07:41-07:00&lt;/date_started&gt;&lt;estimated_completion_date/&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="32" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-02-03T16:07:41-07:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-03-06T16:07:41-07:00&lt;/estimated_completion_date&gt;&lt;date_due/&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="33" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-02-03T16:07:41-07:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-03-06T16:07:41-07:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-03-06T16:07:41-07:00&lt;/date_due&gt;&lt;date_finished/&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="34" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-02-03T16:07:41-07:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-03-06T16:07:41-07:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-03-06T16:07:41-07:00&lt;/date_due&gt;&lt;date_finished&gt;2026-03-06T16:07:41-07:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count/&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="35" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-02-03T16:07:41-07:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-03-06T16:07:41-07:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-03-06T16:07:41-07:00&lt;/date_due&gt;&lt;date_finished&gt;2026-03-06T16:07:41-07:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet/&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="36" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-02-03T16:07:41-07:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-03-06T16:07:41-07:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-03-06T16:07:41-07:00&lt;/date_due&gt;&lt;date_finished&gt;2026-03-06T16:07:41-07:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count/&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="37" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-02-03T16:07:41-07:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-03-06T16:07:41-07:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-03-06T16:07:41-07:00&lt;/date_due&gt;&lt;date_finished&gt;2026-03-06T16:07:41-07:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count&gt;0&lt;/lacp_expected_inspection_count&gt;&lt;lacp_expected_linear_feet/&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="38" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-02-03T16:07:41-07:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-03-06T16:07:41-07:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-03-06T16:07:41-07:00&lt;/date_due&gt;&lt;date_finished&gt;2026-03-06T16:07:41-07:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count&gt;0&lt;/lacp_expected_inspection_count&gt;&lt;lacp_expected_linear_feet&gt;0&lt;/lacp_expected_linear_feet&gt;&lt;macp_expected_inspection_count/&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="39" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-02-03T16:07:41-07:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-03-06T16:07:41-07:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-03-06T16:07:41-07:00&lt;/date_due&gt;&lt;date_finished&gt;2026-03-06T16:07:41-07:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count&gt;0&lt;/lacp_expected_inspection_count&gt;&lt;lacp_expected_linear_feet&gt;0&lt;/lacp_expected_linear_feet&gt;&lt;macp_expected_inspection_count&gt;0&lt;/macp_expected_inspection_count&gt;&lt;macp_expected_linear_feet/&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" to="vPutProjectsReq" label="PutProjectsRequest" state="1" type="1" n="40" sid="BpSeq2.6">
+      <message>Updated variable "vPutProjectsReq"</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-02-03T16:07:41-07:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-03-06T16:07:41-07:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-03-06T16:07:41-07:00&lt;/date_due&gt;&lt;date_finished&gt;2026-03-06T16:07:41-07:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count&gt;0&lt;/lacp_expected_inspection_count&gt;&lt;lacp_expected_linear_feet&gt;0&lt;/lacp_expected_linear_feet&gt;&lt;macp_expected_inspection_count&gt;0&lt;/macp_expected_inspection_count&gt;&lt;macp_expected_linear_feet&gt;0&lt;/macp_expected_linear_feet&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpAss2-BpSeq2.6-5" cat="2" label="PutProjectsRequest" state="5" type="1" n="41" sid="BpSeq2.6">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpInv1-BpSeq2.6-6" cat="2" label="InvokePutProjects" state="1" type="2" n="42" sid="BpSeq2.6">
+      <message>Started invocation of operation "putProjects" on partner "SewerAIProjects".</message>
+   </event>
+   <event date="2026-02-03T14:23:39.447-07:00" wikey="851769-BpInv1-BpSeq2.6-6" cat="2" label="InvokePutProjects" state="1" type="2" n="43" sid="BpSeq2.6">
+      <message>Sending property "rest.binding.http.Authorization", value is "X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d".</message>
+   </event>
+   <event date="2026-02-03T14:23:39.448-07:00" wikey="851769-BpInv1-BpSeq2.6-6" cat="2" label="InvokePutProjects" state="1" type="2" n="44" sid="BpSeq2.6">
+      <message>Sending property "rest.binding.responseType", value is "empty".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.392-07:00" wikey="851769-BpInv1-BpSeq2.6-6" partnerWSDL="" cat="2" label="InvokePutProjects" state="5" type="2" n="45" sid="BpSeq2.6">
+      <message>Invoked 1-way operation "putProjects" on partner "SewerAIProjects".</message>
+      <details>
+&lt;vPutProjectsReq&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ProjectCreateRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putProjects_request"&gt;&lt;sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/sid&gt;&lt;account&gt;&lt;sid&gt;a2edc3a7-82b9-4a9f-ba61-09a58590dfb0&lt;/sid&gt;&lt;/account&gt;&lt;name&gt;Testing 2.1 - Ivara put video via API call&lt;/name&gt;&lt;status&gt;active&lt;/status&gt;&lt;goal_state&gt;autocode_complete&lt;/goal_state&gt;&lt;notes&gt;Created by API test script&lt;/notes&gt;&lt;pacp_project_spec&gt;&lt;sid&gt;f6769e72-411f-4043-95e7-805ddef1249f&lt;/sid&gt;&lt;/pacp_project_spec&gt;&lt;lacp_project_spec&gt;&lt;sid&gt;920dd368-a276-4b73-b629-721cadf842c4&lt;/sid&gt;&lt;/lacp_project_spec&gt;&lt;macp_project_spec&gt;&lt;sid&gt;419a42a4-ae2c-435b-9360-c99334ccd567&lt;/sid&gt;&lt;/macp_project_spec&gt;&lt;run_autocode_on_upload&gt;false&lt;/run_autocode_on_upload&gt;&lt;date_started&gt;2026-02-03T16:07:41-07:00&lt;/date_started&gt;&lt;estimated_completion_date&gt;2026-03-06T16:07:41-07:00&lt;/estimated_completion_date&gt;&lt;date_due&gt;2026-03-06T16:07:41-07:00&lt;/date_due&gt;&lt;date_finished&gt;2026-03-06T16:07:41-07:00&lt;/date_finished&gt;&lt;pacp_expected_inspection_count&gt;0&lt;/pacp_expected_inspection_count&gt;&lt;pacp_expected_linear_feet&gt;0&lt;/pacp_expected_linear_feet&gt;&lt;lacp_expected_inspection_count&gt;0&lt;/lacp_expected_inspection_count&gt;&lt;lacp_expected_linear_feet&gt;0&lt;/lacp_expected_linear_feet&gt;&lt;macp_expected_inspection_count&gt;0&lt;/macp_expected_inspection_count&gt;&lt;macp_expected_linear_feet&gt;0&lt;/macp_expected_linear_feet&gt;&lt;/ProjectCreateRequest&gt;&lt;/part&gt;&lt;/vPutProjectsReq&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.393-07:00" wikey="851769-BpAss3-BpSeq2.6-7" cat="2" to="InvokeUpdateFeedStatus_update_InputVariable" label="AssignStatus" state="1" type="1" n="46" sid="BpSeq2.6">
+      <message>Updated variable "InvokeUpdateFeedStatus_update_InputVariable"</message>
+      <details>
+&lt;InvokeUpdateFeedStatus_update_InputVariable&gt;&lt;part name="EpseweraiWotStg1Collection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiWotStg1Collection xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateWOTSewerAIData"&gt;&lt;EpseweraiWotStg1&gt;&lt;taskUuid&gt;bKoc9ckriEqDEK6wIhE2ew==&lt;/taskUuid&gt;&lt;feedStatus/&gt;&lt;/EpseweraiWotStg1&gt;&lt;/EpseweraiWotStg1Collection&gt;&lt;/part&gt;&lt;/InvokeUpdateFeedStatus_update_InputVariable&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.393-07:00" wikey="851769-BpAss3-BpSeq2.6-7" cat="2" to="InvokeUpdateFeedStatus_update_InputVariable" label="AssignStatus" state="1" type="1" n="47" sid="BpSeq2.6">
+      <message>Updated variable "InvokeUpdateFeedStatus_update_InputVariable"</message>
+      <details>
+&lt;InvokeUpdateFeedStatus_update_InputVariable&gt;&lt;part name="EpseweraiWotStg1Collection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiWotStg1Collection xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateWOTSewerAIData"&gt;&lt;EpseweraiWotStg1&gt;&lt;taskUuid&gt;bKoc9ckriEqDEK6wIhE2ew==&lt;/taskUuid&gt;&lt;feedStatus&gt;SENT&lt;/feedStatus&gt;&lt;/EpseweraiWotStg1&gt;&lt;/EpseweraiWotStg1Collection&gt;&lt;/part&gt;&lt;/InvokeUpdateFeedStatus_update_InputVariable&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.393-07:00" wikey="851769-BpAss3-BpSeq2.6-7" cat="2" label="AssignStatus" state="5" type="1" n="48" sid="BpSeq2.6">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.393-07:00" wikey="851769-BpInv2-BpSeq2.6-8" cat="2" label="InvokeUpdateFeedStatus" state="1" type="2" n="49" sid="BpSeq2.6">
+      <message>Started invocation of operation "update" on partner "UpdateWOTSewerAIData".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.407-07:00" wikey="851769-BpInv2-BpSeq2.6-8" partnerWSDL="" cat="2" label="InvokeUpdateFeedStatus" state="5" type="2" n="50" sid="BpSeq2.6">
+      <message>Invoked 1-way operation "update" on partner "UpdateWOTSewerAIData".</message>
+      <details>
+&lt;InvokeUpdateFeedStatus_update_InputVariable&gt;&lt;part name="EpseweraiWotStg1Collection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiWotStg1Collection xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateWOTSewerAIData"&gt;&lt;EpseweraiWotStg1&gt;&lt;taskUuid&gt;bKoc9ckriEqDEK6wIhE2ew==&lt;/taskUuid&gt;&lt;feedStatus&gt;SENT&lt;/feedStatus&gt;&lt;/EpseweraiWotStg1&gt;&lt;/EpseweraiWotStg1Collection&gt;&lt;/part&gt;&lt;/InvokeUpdateFeedStatus_update_InputVariable&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.407-07:00" cat="1" psid="BpSeq2.6" label="SendVideosScope (476)" type="2" n="51" sid="BpScp1.7">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.408-07:00" cat="1" psid="BpScp1.7" label="tryBlock of scope SendVideosScope (476)" type="2" n="52" sid="BpTry2.8">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.408-07:00" cat="1" psid="BpTry2.8" label="sequence (477)" type="2" n="53" sid="BpSeq4.9">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.408-07:00" wikey="851769-BpInv3-BpSeq4.9-1" cat="2" label="InvokeReadCRInspect" state="1" type="2" n="54" sid="BpSeq4.9">
+      <message>Started invocation of operation "ReadCRInspectSelect" on partner "ReadCRInspect".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.420-07:00" wikey="851769-BpInv3-BpSeq4.9-1" partnerWSDL="" cat="2" label="InvokeReadCRInspect" state="5" type="2" n="55" sid="BpSeq4.9">
+      <message>Invoked 2-way operation "ReadCRInspectSelect" on partner "ReadCRInspect".</message>
+      <details>&lt;messages&gt;
+&lt;InvokeReadCRInspect_ReadCRInspectSelect_InputVariable&gt;&lt;part name="ReadCRInspectSelect_inputParameters" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;ReadCRInspectSelectInputParameters xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/ReadCRInspect"/&gt;&lt;/part&gt;&lt;/InvokeReadCRInspect_ReadCRInspectSelect_InputVariable&gt;
+&lt;InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable&gt;&lt;part name="VCrInspectToSendCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VCrInspectToSendCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/ReadCRInspect"&gt;&lt;VCrInspectToSend&gt;&lt;projectSid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/projectSid&gt;&lt;inspectionType&gt;LACP&lt;/inspectionType&gt;&lt;inspectionid&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/inspectionid&gt;&lt;workorder&gt;279595.1&lt;/workorder&gt;&lt;project&gt;Testing 2.1 - Ivara put video via API call&lt;/project&gt;&lt;poNumber&gt;1&lt;/poNumber&gt;&lt;additionalInformation&gt;&amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&amp;lt;head&gt;
+		&amp;lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;&amp;lt;title&gt;
+		&amp;lt;/title&gt;
+		&amp;lt;style type="text/css"&gt;
+			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+			.cs1E88C66E{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+		&amp;lt;/style&gt;
+	&amp;lt;/head&gt;
+	&amp;lt;body&gt;
+		&amp;lt;p class="cs2654AE3A"&gt;&amp;lt;span class="cs1E88C66E"&gt;WMS team Testing 2.1 - Ivara put video via API call&amp;lt;/span&gt;&amp;lt;/p&gt;&amp;lt;/body&gt;
+&amp;lt;/html&gt;
+&lt;/additionalInformation&gt;&lt;pipeSegmentReference xsi:nil="true"/&gt;&lt;lateralSegmentReference&gt;N-100024&lt;/lateralSegmentReference&gt;&lt;manholeNumber xsi:nil="true"/&gt;&lt;material xsi:nil="true"/&gt;&lt;accessType xsi:nil="true"/&gt;&lt;coverShape xsi:nil="true"/&gt;&lt;upstreamMh xsi:nil="true"/&gt;&lt;downstreamMh xsi:nil="true"/&gt;&lt;feedStatus&gt;NEW&lt;/feedStatus&gt;&lt;/VCrInspectToSend&gt;&lt;VCrInspectToSend&gt;&lt;projectSid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/projectSid&gt;&lt;inspectionType&gt;MACP&lt;/inspectionType&gt;&lt;inspectionid&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/inspectionid&gt;&lt;workorder&gt;279595.1&lt;/workorder&gt;&lt;project&gt;Testing 2.1 - Ivara put video via API call&lt;/project&gt;&lt;poNumber&gt;1&lt;/poNumber&gt;&lt;additionalInformation&gt;&amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&amp;lt;head&gt;
+		&amp;lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;&amp;lt;title&gt;
+		&amp;lt;/title&gt;
+		&amp;lt;style type="text/css"&gt;
+			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+			.cs1E88C66E{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+		&amp;lt;/style&gt;
+	&amp;lt;/head&gt;
+	&amp;lt;body&gt;
+		&amp;lt;p class="cs2654AE3A"&gt;&amp;lt;span class="cs1E88C66E"&gt;WMS team Testing 2.1 - Ivara put video via API call&amp;lt;/span&gt;&amp;lt;/p&gt;&amp;lt;/body&gt;
+&amp;lt;/html&gt;
+&lt;/additionalInformation&gt;&lt;pipeSegmentReference xsi:nil="true"/&gt;&lt;lateralSegmentReference xsi:nil="true"/&gt;&lt;manholeNumber&gt;202454&lt;/manholeNumber&gt;&lt;material xsi:nil="true"/&gt;&lt;accessType xsi:nil="true"/&gt;&lt;coverShape xsi:nil="true"/&gt;&lt;upstreamMh xsi:nil="true"/&gt;&lt;downstreamMh xsi:nil="true"/&gt;&lt;feedStatus&gt;NEW&lt;/feedStatus&gt;&lt;/VCrInspectToSend&gt;&lt;VCrInspectToSend&gt;&lt;projectSid&gt;674d186d-1c81-9c45-85a7-d8e74cd595f3&lt;/projectSid&gt;&lt;inspectionType&gt;LACP&lt;/inspectionType&gt;&lt;inspectionid&gt;1710007b-a6fa-5c45-8b84-119c79dccfc1&lt;/inspectionid&gt;&lt;workorder&gt;279594.1&lt;/workorder&gt;&lt;project&gt;Testing 1.3 - Create Inspection Via SewerAI API&lt;/project&gt;&lt;poNumber&gt;1(3)&lt;/poNumber&gt;&lt;additionalInformation&gt;&amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&amp;lt;head&gt;
+		&amp;lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;&amp;lt;title&gt;
+		&amp;lt;/title&gt;
+		&amp;lt;style type="text/css"&gt;
+			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+			.cs1E88C66E{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+		&amp;lt;/style&gt;
+	&amp;lt;/head&gt;
+	&amp;lt;body&gt;
+		&amp;lt;p class="cs2654AE3A"&gt;&amp;lt;span class="cs1E88C66E"&gt;WMS team Test 1.3 - Create Inspection Via SewerAI API &amp;lt;/span&gt;&amp;lt;/p&gt;&amp;lt;/body&gt;
+&amp;lt;/html&gt;
+&lt;/additionalInformation&gt;&lt;pipeSegmentReference xsi:nil="true"/&gt;&lt;lateralSegmentReference&gt;N-100263&lt;/lateralSegmentReference&gt;&lt;manholeNumber xsi:nil="true"/&gt;&lt;material xsi:nil="true"/&gt;&lt;accessType xsi:nil="true"/&gt;&lt;coverShape xsi:nil="true"/&gt;&lt;upstreamMh xsi:nil="true"/&gt;&lt;downstreamMh xsi:nil="true"/&gt;&lt;feedStatus&gt;NEW&lt;/feedStatus&gt;&lt;/VCrInspectToSend&gt;&lt;VCrInspectToSend&gt;&lt;projectSid&gt;674d186d-1c81-9c45-85a7-d8e74cd595f3&lt;/projectSid&gt;&lt;inspectionType&gt;MACP&lt;/inspectionType&gt;&lt;inspectionid&gt;d6ebbad9-5be5-6f41-9365-7c5c4052fa04&lt;/inspectionid&gt;&lt;workorder&gt;279594.1&lt;/workorder&gt;&lt;project&gt;Testing 1.3 - Create Inspection Via SewerAI API&lt;/project&gt;&lt;poNumber&gt;1(3)&lt;/poNumber&gt;&lt;additionalInformation&gt;&amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&amp;lt;head&gt;
+		&amp;lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;&amp;lt;title&gt;
+		&amp;lt;/title&gt;
+		&amp;lt;style type="text/css"&gt;
+			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+			.cs1E88C66E{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+		&amp;lt;/style&gt;
+	&amp;lt;/head&gt;
+	&amp;lt;body&gt;
+		&amp;lt;p class="cs2654AE3A"&gt;&amp;lt;span class="cs1E88C66E"&gt;WMS team Test 1.3 - Create Inspection Via SewerAI API &amp;lt;/span&gt;&amp;lt;/p&gt;&amp;lt;/body&gt;
+&amp;lt;/html&gt;
+&lt;/additionalInformation&gt;&lt;pipeSegmentReference xsi:nil="true"/&gt;&lt;lateralSegmentReference xsi:nil="true"/&gt;&lt;manholeNumber&gt;202682&lt;/manholeNumber&gt;&lt;material xsi:nil="true"/&gt;&lt;accessType&gt;STORM&lt;/accessType&gt;&lt;coverShape xsi:nil="true"/&gt;&lt;upstreamMh xsi:nil="true"/&gt;&lt;downstreamMh xsi:nil="true"/&gt;&lt;feedStatus&gt;NEW&lt;/feedStatus&gt;&lt;/VCrInspectToSend&gt;&lt;VCrInspectToSend&gt;&lt;projectSid&gt;674d186d-1c81-9c45-85a7-d8e74cd595f3&lt;/projectSid&gt;&lt;inspectionType&gt;PACP&lt;/inspectionType&gt;&lt;inspectionid&gt;b0574af8-07cc-a146-9810-c876d29f04c5&lt;/inspectionid&gt;&lt;workorder&gt;279594.1&lt;/workorder&gt;&lt;project&gt;Testing 1.3 - Create Inspection Via SewerAI API&lt;/project&gt;&lt;poNumber&gt;1(3)&lt;/poNumber&gt;&lt;additionalInformation&gt;&amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&amp;lt;head&gt;
+		&amp;lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;&amp;lt;title&gt;
+		&amp;lt;/title&gt;
+		&amp;lt;style type="text/css"&gt;
+			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+			.cs1E88C66E{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+		&amp;lt;/style&gt;
+	&amp;lt;/head&gt;
+	&amp;lt;body&gt;
+		&amp;lt;p class="cs2654AE3A"&gt;&amp;lt;span class="cs1E88C66E"&gt;WMS team Test 1.3 - Create Inspection Via SewerAI API &amp;lt;/span&gt;&amp;lt;/p&gt;&amp;lt;/body&gt;
+&amp;lt;/html&gt;
+&lt;/additionalInformation&gt;&lt;pipeSegmentReference&gt;99997&lt;/pipeSegmentReference&gt;&lt;lateralSegmentReference xsi:nil="true"/&gt;&lt;manholeNumber xsi:nil="true"/&gt;&lt;material&gt;NON-REINFORCED CONCRETE&lt;/material&gt;&lt;accessType&gt;STORM&lt;/accessType&gt;&lt;coverShape xsi:nil="true"/&gt;&lt;upstreamMh&gt;MH215685&lt;/upstreamMh&gt;&lt;downstreamMh&gt;MH215684&lt;/downstreamMh&gt;&lt;feedStatus&gt;NEW&lt;/feedStatus&gt;&lt;/VCrInspectToSend&gt;&lt;VCrInspectToSend&gt;&lt;projectSid&gt;9f08cb22-f093-2749-9b56-7893be53a5ea&lt;/projectSid&gt;&lt;inspectionType&gt;PACP&lt;/inspectionType&gt;&lt;inspectionid&gt;672fccb2-d7f6-574d-8038-1a609b8243ad&lt;/inspectionid&gt;&lt;workorder&gt;279593.1&lt;/workorder&gt;&lt;project&gt;Testing 1.2 - SewerAI to API testing&lt;/project&gt;&lt;poNumber&gt;1&lt;/poNumber&gt;&lt;additionalInformation&gt;&amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&amp;lt;head&gt;
+		&amp;lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;&amp;lt;title&gt;
+		&amp;lt;/title&gt;
+		&amp;lt;style type="text/css"&gt;
+			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+			.cs1E88C66E{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+		&amp;lt;/style&gt;
+	&amp;lt;/head&gt;
+	&amp;lt;body&gt;
+		&amp;lt;p class="cs2654AE3A"&gt;&amp;lt;span class="cs1E88C66E"&gt;WMS team - Testing 1.2 - SewerAI to API testing&amp;lt;/span&gt;&amp;lt;/p&gt;&amp;lt;/body&gt;
+&amp;lt;/html&gt;
+&lt;/additionalInformation&gt;&lt;pipeSegmentReference&gt;102178&lt;/pipeSegmentReference&gt;&lt;lateralSegmentReference xsi:nil="true"/&gt;&lt;manholeNumber xsi:nil="true"/&gt;&lt;material xsi:nil="true"/&gt;&lt;accessType&gt;STORM&lt;/accessType&gt;&lt;coverShape xsi:nil="true"/&gt;&lt;upstreamMh&gt;CB212733&lt;/upstreamMh&gt;&lt;downstreamMh&gt;MH211756&lt;/downstreamMh&gt;&lt;feedStatus&gt;NEW&lt;/feedStatus&gt;&lt;/VCrInspectToSend&gt;&lt;VCrInspectToSend&gt;&lt;projectSid&gt;9f08cb22-f093-2749-9b56-7893be53a5ea&lt;/projectSid&gt;&lt;inspectionType&gt;MACP&lt;/inspectionType&gt;&lt;inspectionid&gt;660d17af-de6b-4843-ade1-d8d087be1ac1&lt;/inspectionid&gt;&lt;workorder&gt;279593.1&lt;/workorder&gt;&lt;project&gt;Testing 1.2 - SewerAI to API testing&lt;/project&gt;&lt;poNumber&gt;1&lt;/poNumber&gt;&lt;additionalInformation&gt;&amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+&amp;lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+	&amp;lt;head&gt;
+		&amp;lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;&amp;lt;title&gt;
+		&amp;lt;/title&gt;
+		&amp;lt;style type="text/css"&gt;
+			.cs2654AE3A{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+			.cs1E88C66E{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+		&amp;lt;/style&gt;
+	&amp;lt;/head&gt;
+	&amp;lt;body&gt;
+		&amp;lt;p class="cs2654AE3A"&gt;&amp;lt;span class="cs1E88C66E"&gt;WMS team - Testing 1.2 - SewerAI to API testing&amp;lt;/span&gt;&amp;lt;/p&gt;&amp;lt;/body&gt;
+&amp;lt;/html&gt;
+&lt;/additionalInformation&gt;&lt;pipeSegmentReference xsi:nil="true"/&gt;&lt;lateralSegmentReference xsi:nil="true"/&gt;&lt;manholeNumber&gt;223234&lt;/manholeNumber&gt;&lt;material xsi:nil="true"/&gt;&lt;accessType xsi:nil="true"/&gt;&lt;coverShape xsi:nil="true"/&gt;&lt;upstreamMh xsi:nil="true"/&gt;&lt;downstreamMh xsi:nil="true"/&gt;&lt;feedStatus&gt;NEW&lt;/feedStatus&gt;&lt;/VCrInspectToSend&gt;&lt;/VCrInspectToSendCollection&gt;&lt;/part&gt;&lt;/InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable&gt;&lt;/messages&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.421-07:00" wikey="851769-BpAss4-BpSeq4.9-2" cat="2" to="vInspectRowCount" label="SetInspectRowCount" state="1" type="1" n="56" sid="BpSeq4.9">
+      <message>Updated variable "vInspectRowCount"</message>
+      <details>
+&lt;vInspectRowCount&gt;&lt;vInspectRowCount xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:int" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;2&lt;/vInspectRowCount&gt;&lt;/vInspectRowCount&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.421-07:00" wikey="851769-BpAss4-BpSeq4.9-2" cat="2" label="SetInspectRowCount" state="5" type="1" n="57" sid="BpSeq4.9">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.421-07:00" cat="1" psid="BpSeq4.9" label="HasRowsIf (491)" type="2" n="58" sid="BpIf0.10">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.421-07:00" wikey="851769-BpIf0_Nd-BpIf0.10-1" cat="2" label="HasRowsIf" state="5" type="2" n="59" sid="BpIf0.10">
+      <message>If is selected. Condition is "$vInspectRowCount &gt; 0".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.421-07:00" cat="1" psid="BpIf0.10" label="sequence (493)" type="2" n="60" sid="BpSeq5.11">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.421-07:00" cat="1" psid="BpSeq5.11" label="ForEach_Row (495)" type="2" n="61" sid="BpFrE0.12">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.421-07:00" wikey="851769-BpFrE0_Nd-BpFrE0.12-1" cat="2" label="ForEach_Row" state="5" type="2" n="62" sid="BpFrE0.12">
+      <message>BPEL "forEach" activity: startCounterValue is "1", finalCounterValue is "2".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.421-07:00" cat="1" psid="BpFrE0.12" label="ProcessOneRow (499)" type="2" n="63" sid="BpScp2.13">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.421-07:00" cat="1" psid="BpScp2.13" label="tryBlock of scope ProcessOneRow (499)" type="2" n="64" sid="BpTry3.14">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.421-07:00" cat="1" psid="BpTry3.14" label="sequence (517)" type="2" n="65" sid="BpSeq7.15">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.421-07:00" cat="1" psid="BpSeq7.15" label="OnlyProcessMatchingProjectSid (518)" type="2" n="66" sid="BpIf1.16">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.422-07:00" wikey="851769-BpIf1_Nd-BpIf1.16-1" cat="2" label="OnlyProcessMatchingProjectSid" state="5" type="2" n="67" sid="BpIf1.16">
+      <message>If is selected. Condition is "true()".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.422-07:00" cat="1" psid="BpIf1.16" label="sequence (521)" type="2" n="68" sid="BpSeq8.17">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.422-07:00" wikey="851769-BpAss6-BpSeq8.17-1" cat="2" to="vInspectJson" label="BuildInspectJson" state="1" type="1" n="69" sid="BpSeq8.17">
+      <message>Updated variable "vInspectJson"</message>
+      <details>
+&lt;vInspectJson&gt;&lt;vInspectJson xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;{"items":[{"project_sid":"6caa1cf5-c92b-884a-8310-aeb02211367b","header":{"InspectionID":"a521bb0f-a46d-8049-acb4-dc96ad112937","Surveyed_By":"","Certificate_Number":"","Material":"","Inspection_Status":"","Upstream_MH":"","Downstream_MH":"","Pipe_Segment_Reference":"","Lateral_Segment_Reference":"N-100024","Access_Point":"","Manhole_Number":"","Access_Type":"","Cover_Shape":""}}]}&lt;/vInspectJson&gt;&lt;/vInspectJson&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.422-07:00" wikey="851769-BpAss6-BpSeq8.17-1" cat="2" label="BuildInspectJson" state="5" type="1" n="70" sid="BpSeq8.17">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.422-07:00" wikey="851769-BxExe2-BpSeq8.17-2" cat="2" label="SetInspectOpaque" state="5" type="2" n="71" sid="BpSeq8.17">
+      <message>bpelx:exec executed</message>
+   </event>
+   <event date="2026-02-03T14:23:41.423-07:00" wikey="851769-BpAss7-BpSeq8.17-3" cat="2" to="vOutFileName" label="SetOutFileName" state="1" type="1" n="72" sid="BpSeq8.17">
+      <message>Updated variable "vOutFileName"</message>
+      <details>
+&lt;vOutFileName&gt;&lt;vOutFileName xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;inspect_6caa1cf5-c92b-884a-8310-aeb02211367b_a521bb0f-a46d-8049-acb4-dc96ad112937.json&lt;/vOutFileName&gt;&lt;/vOutFileName&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.423-07:00" wikey="851769-BpAss7-BpSeq8.17-3" cat="2" label="SetOutFileName" state="5" type="1" n="73" sid="BpSeq8.17">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.423-07:00" wikey="851769-BpInv4-BpSeq8.17-4" cat="2" label="WriteInspectJson" state="1" type="2" n="74" sid="BpSeq8.17">
+      <message>Started invocation of operation "Write" on partner "ExportInspectUpdate_sp".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.423-07:00" wikey="851769-BpInv4-BpSeq8.17-4" cat="2" label="WriteInspectJson" state="1" type="2" n="75" sid="BpSeq8.17">
+      <message>Sending property "jca.file.FileName", value is "inspect_6caa1cf5-c92b-884a-8310-aeb02211367b_a521bb0f-a46d-8049-acb4-dc96ad112937.json".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.428-07:00" wikey="851769-BpInv4-BpSeq8.17-4" partnerWSDL="" cat="2" label="WriteInspectJson" state="5" type="2" n="76" sid="BpSeq8.17">
+      <message>Invoked 1-way operation "Write" on partner "ExportInspectUpdate_sp".</message>
+      <details>
+&lt;fileInspectWriteRequest&gt;&lt;part name="opaque" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;opaqueElement xmlns="http://xmlns.oracle.com/pcbpel/adapter/opaque/"&gt;eyJpdGVtcyI6W3sicHJvamVjdF9zaWQiOiI2Y2FhMWNmNS1jOTJiLTg4NGEtODMxMC1hZWIwMjIxMTM2N2IiLCJoZWFkZXIiOnsiSW5zcGVjdGlvbklEIjoiYTUyMWJiMGYtYTQ2ZC04MDQ5LWFjYjQtZGM5NmFkMTEyOTM3IiwiU3VydmV5ZWRfQnkiOiIiLCJDZXJ0aWZpY2F0ZV9OdW1iZXIiOiIiLCJNYXRlcmlhbCI6IiIsIkluc3BlY3Rpb25fU3RhdHVzIjoiIiwiVXBzdHJlYW1fTUgiOiIiLCJEb3duc3RyZWFtX01IIjoiIiwiUGlwZV9TZWdtZW50X1JlZmVyZW5jZSI6IiIsIkxhdGVyYWxfU2VnbWVudF9SZWZlcmVuY2UiOiJOLTEwMDAyNCIsIkFjY2Vzc19Qb2ludCI6IiIsIk1hbmhvbGVfTnVtYmVyIjoiIiwiQWNjZXNzX1R5cGUiOiIiLCJDb3Zlcl9TaGFwZSI6IiJ9fV19&lt;/opaqueElement&gt;&lt;/part&gt;&lt;/fileInspectWriteRequest&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" wikey="851769-BpAss8-BpSeq8.17-5" cat="2" to="vFeedStatus" label="InitRowStatus" state="1" type="1" n="77" sid="BpSeq8.17">
+      <message>Updated variable "vFeedStatus"</message>
+      <details>
+&lt;vFeedStatus&gt;&lt;vFeedStatus xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;SENT&lt;/vFeedStatus&gt;&lt;/vFeedStatus&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" wikey="851769-BpAss8-BpSeq8.17-5" cat="2" to="vFeedMessage" label="InitRowStatus" state="1" type="1" n="78" sid="BpSeq8.17">
+      <message>Updated variable "vFeedMessage"</message>
+      <details>
+&lt;vFeedMessage&gt;&lt;vFeedMessage xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;OK&lt;/vFeedMessage&gt;&lt;/vFeedMessage&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" wikey="851769-BpAss8-BpSeq8.17-5" cat="2" label="InitRowStatus" state="5" type="1" n="79" sid="BpSeq8.17">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" cat="1" psid="BpSeq8.17" label="PutVideos_AllTypes (599)" type="2" n="80" sid="BpScp3.18">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" cat="1" psid="BpScp3.18" label="tryBlock of scope PutVideos_AllTypes (599)" type="2" n="81" sid="BpTry4.19">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" cat="1" psid="BpTry4.19" label="sequence (620)" type="2" n="82" sid="BpSeq10.20">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" wikey="851769-BpAss11-BpSeq10.20-1" cat="2" to="vAuth" label="InitPutVideosHeaders" state="1" type="1" n="83" sid="BpSeq10.20">
+      <message>Updated variable "vAuth"</message>
+      <details>
+&lt;vAuth&gt;&lt;vAuth&gt;X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d&lt;/vAuth&gt;&lt;/vAuth&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" wikey="851769-BpAss11-BpSeq10.20-1" cat="2" to="vCT" label="InitPutVideosHeaders" state="1" type="1" n="84" sid="BpSeq10.20">
+      <message>Updated variable "vCT"</message>
+      <details>
+&lt;vCT&gt;&lt;vCT&gt;application/json&lt;/vCT&gt;&lt;/vCT&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" wikey="851769-BpAss11-BpSeq10.20-1" cat="2" to="vAccept" label="InitPutVideosHeaders" state="1" type="1" n="85" sid="BpSeq10.20">
+      <message>Updated variable "vAccept"</message>
+      <details>
+&lt;vAccept&gt;&lt;vAccept xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;application/json&lt;/vAccept&gt;&lt;/vAccept&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" wikey="851769-BpAss11-BpSeq10.20-1" cat="2" label="InitPutVideosHeaders" state="5" type="1" n="86" sid="BpSeq10.20">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" cat="1" psid="BpSeq10.20" label="PickEndpointIf (635)" type="2" n="87" sid="BpIf2.21">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" wikey="851769-BpIf2_Nd-BpIf2.21-1" cat="2" label="PickEndpointIf" state="5" type="2" n="88" sid="BpIf2.21">
+      <message>If is selected. Condition is "normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionType)) = 'LACP'".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.429-07:00" cat="1" psid="BpIf2.21" label="sequence (637)" type="2" n="89" sid="BpSeq11.22">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.430-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" to="putVideosLACP_In" label="BuildLACPRequest" state="1" type="1" n="90" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;vl:project_sid/&gt;
+                              &lt;vl:header&gt;
+                                &lt;vl:InspectionID/&gt;&lt;vl:Surveyed_By/&gt;&lt;vl:Certificate_Number/&gt;
+                                &lt;vl:Material/&gt;&lt;vl:Inspection_Status/&gt;
+                                &lt;vl:Upstream_MH/&gt;&lt;vl:Downstream_MH/&gt;
+                                &lt;vl:Pipe_Segment_Reference/&gt;&lt;vl:Lateral_Segment_Reference/&gt;
+                                &lt;vl:Access_Point/&gt;&lt;vl:Manhole_Number/&gt;&lt;vl:Access_Type/&gt;&lt;vl:Cover_Shape/&gt;
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.430-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" to="putVideosLACP_In" label="BuildLACPRequest" state="1" type="1" n="91" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;vl:InspectionID/&gt;&lt;vl:Surveyed_By/&gt;&lt;vl:Certificate_Number/&gt;
+                                &lt;vl:Material/&gt;&lt;vl:Inspection_Status/&gt;
+                                &lt;vl:Upstream_MH/&gt;&lt;vl:Downstream_MH/&gt;
+                                &lt;vl:Pipe_Segment_Reference/&gt;&lt;vl:Lateral_Segment_Reference/&gt;
+                                &lt;vl:Access_Point/&gt;&lt;vl:Manhole_Number/&gt;&lt;vl:Access_Type/&gt;&lt;vl:Cover_Shape/&gt;
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.430-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" to="putVideosLACP_In" label="BuildLACPRequest" state="1" type="1" n="92" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;InspectionID&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/InspectionID&gt;&lt;vl:Surveyed_By/&gt;&lt;vl:Certificate_Number/&gt;
+                                &lt;vl:Material/&gt;&lt;vl:Inspection_Status/&gt;
+                                &lt;vl:Upstream_MH/&gt;&lt;vl:Downstream_MH/&gt;
+                                &lt;vl:Pipe_Segment_Reference/&gt;&lt;vl:Lateral_Segment_Reference/&gt;
+                                &lt;vl:Access_Point/&gt;&lt;vl:Manhole_Number/&gt;&lt;vl:Access_Type/&gt;&lt;vl:Cover_Shape/&gt;
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.430-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" to="putVideosLACP_In" label="BuildLACPRequest" state="1" type="1" n="93" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;InspectionID&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/InspectionID&gt;&lt;vl:Surveyed_By/&gt;&lt;vl:Certificate_Number/&gt;
+                                &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Inspection_Status/&gt;
+                                &lt;vl:Upstream_MH/&gt;&lt;vl:Downstream_MH/&gt;
+                                &lt;vl:Pipe_Segment_Reference/&gt;&lt;vl:Lateral_Segment_Reference/&gt;
+                                &lt;vl:Access_Point/&gt;&lt;vl:Manhole_Number/&gt;&lt;vl:Access_Type/&gt;&lt;vl:Cover_Shape/&gt;
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.430-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" to="putVideosLACP_In" label="BuildLACPRequest" state="1" type="1" n="94" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;InspectionID&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/InspectionID&gt;&lt;vl:Surveyed_By/&gt;&lt;vl:Certificate_Number/&gt;
+                                &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Inspection_Status/&gt;
+                                &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Downstream_MH/&gt;
+                                &lt;vl:Pipe_Segment_Reference/&gt;&lt;vl:Lateral_Segment_Reference/&gt;
+                                &lt;vl:Access_Point/&gt;&lt;vl:Manhole_Number/&gt;&lt;vl:Access_Type/&gt;&lt;vl:Cover_Shape/&gt;
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.431-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" to="putVideosLACP_In" label="BuildLACPRequest" state="1" type="1" n="95" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;InspectionID&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/InspectionID&gt;&lt;vl:Surveyed_By/&gt;&lt;vl:Certificate_Number/&gt;
+                                &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Inspection_Status/&gt;
+                                &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                &lt;vl:Pipe_Segment_Reference/&gt;&lt;vl:Lateral_Segment_Reference/&gt;
+                                &lt;vl:Access_Point/&gt;&lt;vl:Manhole_Number/&gt;&lt;vl:Access_Type/&gt;&lt;vl:Cover_Shape/&gt;
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.431-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" to="putVideosLACP_In" label="BuildLACPRequest" state="1" type="1" n="96" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;InspectionID&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/InspectionID&gt;&lt;vl:Surveyed_By/&gt;&lt;vl:Certificate_Number/&gt;
+                                &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Inspection_Status/&gt;
+                                &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                &lt;Pipe_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Lateral_Segment_Reference/&gt;
+                                &lt;vl:Access_Point/&gt;&lt;vl:Manhole_Number/&gt;&lt;vl:Access_Type/&gt;&lt;vl:Cover_Shape/&gt;
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.431-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" to="putVideosLACP_In" label="BuildLACPRequest" state="1" type="1" n="97" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;InspectionID&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/InspectionID&gt;&lt;vl:Surveyed_By/&gt;&lt;vl:Certificate_Number/&gt;
+                                &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Inspection_Status/&gt;
+                                &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                &lt;Pipe_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Lateral_Segment_Reference&gt;N-100024&lt;/Lateral_Segment_Reference&gt;
+                                &lt;vl:Access_Point/&gt;&lt;vl:Manhole_Number/&gt;&lt;vl:Access_Type/&gt;&lt;vl:Cover_Shape/&gt;
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.431-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" to="putVideosLACP_In" label="BuildLACPRequest" state="1" type="1" n="98" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;InspectionID&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/InspectionID&gt;&lt;vl:Surveyed_By/&gt;&lt;vl:Certificate_Number/&gt;
+                                &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Inspection_Status/&gt;
+                                &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                &lt;Pipe_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Lateral_Segment_Reference&gt;N-100024&lt;/Lateral_Segment_Reference&gt;
+                                &lt;vl:Access_Point/&gt;&lt;Manhole_Number xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Access_Type/&gt;&lt;vl:Cover_Shape/&gt;
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.431-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" to="putVideosLACP_In" label="BuildLACPRequest" state="1" type="1" n="99" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;InspectionID&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/InspectionID&gt;&lt;vl:Surveyed_By/&gt;&lt;vl:Certificate_Number/&gt;
+                                &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Inspection_Status/&gt;
+                                &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                &lt;Pipe_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Lateral_Segment_Reference&gt;N-100024&lt;/Lateral_Segment_Reference&gt;
+                                &lt;vl:Access_Point/&gt;&lt;Manhole_Number xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Access_Type xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Cover_Shape/&gt;
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.431-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" to="putVideosLACP_In" label="BuildLACPRequest" state="1" type="1" n="100" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;InspectionID&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/InspectionID&gt;&lt;vl:Surveyed_By/&gt;&lt;vl:Certificate_Number/&gt;
+                                &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vl:Inspection_Status/&gt;
+                                &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                &lt;Pipe_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Lateral_Segment_Reference&gt;N-100024&lt;/Lateral_Segment_Reference&gt;
+                                &lt;vl:Access_Point/&gt;&lt;Manhole_Number xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Access_Type xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Cover_Shape xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.431-07:00" wikey="851769-BpAss12-BpSeq11.22-1" cat="2" label="BuildLACPRequest" state="5" type="1" n="101" sid="BpSeq11.22">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.439-07:00" wikey="851769-BpAss13-BpSeq11.22-2" cat="2" to="putVideosLACP_In" label="CleanLACPRequest" state="1" type="1" n="102" sid="BpSeq11.22">
+      <message>Updated variable "putVideosLACP_In"</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;InspectionID&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/InspectionID&gt;
+                                
+                                
+                                &lt;Lateral_Segment_Reference&gt;N-100024&lt;/Lateral_Segment_Reference&gt;
+                                
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.439-07:00" wikey="851769-BpAss13-BpSeq11.22-2" cat="2" label="CleanLACPRequest" state="5" type="1" n="103" sid="BpSeq11.22">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.440-07:00" wikey="851769-BpInv5-BpSeq11.22-3" cat="2" label="InvokePutVideosLACP" state="1" type="2" n="104" sid="BpSeq11.22">
+      <message>Started invocation of operation "putVideosLACP" on partner "SewerAIVideos".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.440-07:00" wikey="851769-BpInv5-BpSeq11.22-3" cat="2" label="InvokePutVideosLACP" state="1" type="2" n="105" sid="BpSeq11.22">
+      <message>Sending property "rest.binding.http.Authorization", value is "X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.440-07:00" wikey="851769-BpInv5-BpSeq11.22-3" cat="2" label="InvokePutVideosLACP" state="1" type="2" n="106" sid="BpSeq11.22">
+      <message>Sending property "rest.binding.responseType", value is "empty".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.440-07:00" wikey="851769-BpInv5-BpSeq11.22-3" cat="2" label="InvokePutVideosLACP" state="1" type="2" n="107" sid="BpSeq11.22">
+      <message>Sending property "rest.binding.http.Accept", value is "application/json".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.440-07:00" wikey="851769-BpInv5-BpSeq11.22-3" cat="2" label="InvokePutVideosLACP" state="1" type="2" n="108" sid="BpSeq11.22">
+      <message>Sending property "rest.binding.http.Content-Type", value is "application/json".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.738-07:00" wikey="851769-BpInv5-BpSeq11.22-3" partnerWSDL="" cat="2" label="InvokePutVideosLACP" state="5" type="2" n="109" sid="BpSeq11.22">
+      <message>Invoked 1-way operation "putVideosLACP" on partner "SewerAIVideos".</message>
+      <details>
+&lt;putVideosLACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"&gt;
+                            &lt;vl:items&gt;
+                              &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                              &lt;vl:header&gt;
+                                &lt;InspectionID&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/InspectionID&gt;
+                                
+                                
+                                &lt;Lateral_Segment_Reference&gt;N-100024&lt;/Lateral_Segment_Reference&gt;
+                                
+                              &lt;/vl:header&gt;
+                            &lt;/vl:items&gt;
+                          &lt;/VideosLACPRequest&gt;&lt;/part&gt;&lt;/putVideosLACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.738-07:00" cat="1" type="2" n="110" sid="BpSeq11.22">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.738-07:00" cat="1" type="2" n="111" sid="BpIf2.21">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.738-07:00" cat="1" type="2" n="112" sid="BpSeq10.20">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.738-07:00" cat="1" type="2" n="113" sid="BpTry4.19">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.738-07:00" cat="1" type="2" n="114" sid="BpScp3.18">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.738-07:00" wikey="851769-BpAss19-BpSeq8.17-6" cat="2" to="UpdateCRInspectStatus_In" label="BuildUpdateCRInspectStatus" state="1" type="1" n="115" sid="BpSeq8.17">
+      <message>Updated variable "UpdateCRInspectStatus_In"</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;topUCS:inspectionid/&gt;
+                          &lt;topUCS:feedStatus/&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.739-07:00" wikey="851769-BpAss19-BpSeq8.17-6" cat="2" to="UpdateCRInspectStatus_In" label="BuildUpdateCRInspectStatus" state="1" type="1" n="116" sid="BpSeq8.17">
+      <message>Updated variable "UpdateCRInspectStatus_In"</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;inspectionid&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/inspectionid&gt;
+                          &lt;topUCS:feedStatus/&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.739-07:00" wikey="851769-BpAss19-BpSeq8.17-6" cat="2" to="UpdateCRInspectStatus_In" label="BuildUpdateCRInspectStatus" state="1" type="1" n="117" sid="BpSeq8.17">
+      <message>Updated variable "UpdateCRInspectStatus_In"</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;inspectionid&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/inspectionid&gt;
+                          &lt;topUCS:feedStatus&gt;SENT&lt;/topUCS:feedStatus&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.739-07:00" wikey="851769-BpAss19-BpSeq8.17-6" cat="2" label="BuildUpdateCRInspectStatus" state="5" type="1" n="118" sid="BpSeq8.17">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.740-07:00" wikey="851769-BpInv8-BpSeq8.17-7" cat="2" label="InvokeUpdateCRInspectStatus" state="1" type="2" n="119" sid="BpSeq8.17">
+      <message>Started invocation of operation "update" on partner "UpdateCRInspectStatus".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" wikey="851769-BpInv8-BpSeq8.17-7" partnerWSDL="" cat="2" label="InvokeUpdateCRInspectStatus" state="5" type="2" n="120" sid="BpSeq8.17">
+      <message>Invoked 1-way operation "update" on partner "UpdateCRInspectStatus".</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;inspectionid&gt;a521bb0f-a46d-8049-acb4-dc96ad112937&lt;/inspectionid&gt;
+                          &lt;topUCS:feedStatus&gt;SENT&lt;/topUCS:feedStatus&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" cat="1" type="2" n="121" sid="BpSeq8.17">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" cat="1" type="2" n="122" sid="BpIf1.16">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" cat="1" type="2" n="123" sid="BpSeq7.15">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" cat="1" type="2" n="124" sid="BpTry3.14">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" cat="1" type="2" n="125" sid="BpScp2.13">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" cat="1" psid="BpFrE0.12" label="ProcessOneRow (499)" type="2" n="126" sid="BpScp2.23">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" cat="1" psid="BpScp2.23" label="tryBlock of scope ProcessOneRow (499)" type="2" n="127" sid="BpTry3.24">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" cat="1" psid="BpTry3.24" label="sequence (517)" type="2" n="128" sid="BpSeq7.25">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" cat="1" psid="BpSeq7.25" label="OnlyProcessMatchingProjectSid (518)" type="2" n="129" sid="BpIf1.26">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" wikey="851769-BpIf1_Nd-BpIf1.26-1" cat="2" label="OnlyProcessMatchingProjectSid" state="5" type="2" n="130" sid="BpIf1.26">
+      <message>If is selected. Condition is "true()".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.754-07:00" cat="1" psid="BpIf1.26" label="sequence (521)" type="2" n="131" sid="BpSeq8.27">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.755-07:00" wikey="851769-BpAss6-BpSeq8.27-1" cat="2" to="vInspectJson" label="BuildInspectJson" state="1" type="1" n="132" sid="BpSeq8.27">
+      <message>Updated variable "vInspectJson"</message>
+      <details>
+&lt;vInspectJson&gt;&lt;vInspectJson xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;{"items":[{"project_sid":"6caa1cf5-c92b-884a-8310-aeb02211367b","header":{"InspectionID":"d3a39f73-7017-f643-a541-122b0591b8a5","Surveyed_By":"","Certificate_Number":"","Material":"","Inspection_Status":"","Upstream_MH":"","Downstream_MH":"","Pipe_Segment_Reference":"","Lateral_Segment_Reference":"","Access_Point":"","Manhole_Number":"202454","Access_Type":"","Cover_Shape":""}}]}&lt;/vInspectJson&gt;&lt;/vInspectJson&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.755-07:00" wikey="851769-BpAss6-BpSeq8.27-1" cat="2" label="BuildInspectJson" state="5" type="1" n="133" sid="BpSeq8.27">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.755-07:00" wikey="851769-BxExe2-BpSeq8.27-2" cat="2" label="SetInspectOpaque" state="5" type="2" n="134" sid="BpSeq8.27">
+      <message>bpelx:exec executed</message>
+   </event>
+   <event date="2026-02-03T14:23:41.755-07:00" wikey="851769-BpAss7-BpSeq8.27-3" cat="2" to="vOutFileName" label="SetOutFileName" state="1" type="1" n="135" sid="BpSeq8.27">
+      <message>Updated variable "vOutFileName"</message>
+      <details>
+&lt;vOutFileName&gt;&lt;vOutFileName xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;inspect_6caa1cf5-c92b-884a-8310-aeb02211367b_d3a39f73-7017-f643-a541-122b0591b8a5.json&lt;/vOutFileName&gt;&lt;/vOutFileName&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.755-07:00" wikey="851769-BpAss7-BpSeq8.27-3" cat="2" label="SetOutFileName" state="5" type="1" n="136" sid="BpSeq8.27">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.755-07:00" wikey="851769-BpInv4-BpSeq8.27-4" cat="2" label="WriteInspectJson" state="1" type="2" n="137" sid="BpSeq8.27">
+      <message>Started invocation of operation "Write" on partner "ExportInspectUpdate_sp".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.755-07:00" wikey="851769-BpInv4-BpSeq8.27-4" cat="2" label="WriteInspectJson" state="1" type="2" n="138" sid="BpSeq8.27">
+      <message>Sending property "jca.file.FileName", value is "inspect_6caa1cf5-c92b-884a-8310-aeb02211367b_d3a39f73-7017-f643-a541-122b0591b8a5.json".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" wikey="851769-BpInv4-BpSeq8.27-4" partnerWSDL="" cat="2" label="WriteInspectJson" state="5" type="2" n="139" sid="BpSeq8.27">
+      <message>Invoked 1-way operation "Write" on partner "ExportInspectUpdate_sp".</message>
+      <details>
+&lt;fileInspectWriteRequest&gt;&lt;part name="opaque" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;opaqueElement xmlns="http://xmlns.oracle.com/pcbpel/adapter/opaque/"&gt;eyJpdGVtcyI6W3sicHJvamVjdF9zaWQiOiI2Y2FhMWNmNS1jOTJiLTg4NGEtODMxMC1hZWIwMjIxMTM2N2IiLCJoZWFkZXIiOnsiSW5zcGVjdGlvbklEIjoiZDNhMzlmNzMtNzAxNy1mNjQzLWE1NDEtMTIyYjA1OTFiOGE1IiwiU3VydmV5ZWRfQnkiOiIiLCJDZXJ0aWZpY2F0ZV9OdW1iZXIiOiIiLCJNYXRlcmlhbCI6IiIsIkluc3BlY3Rpb25fU3RhdHVzIjoiIiwiVXBzdHJlYW1fTUgiOiIiLCJEb3duc3RyZWFtX01IIjoiIiwiUGlwZV9TZWdtZW50X1JlZmVyZW5jZSI6IiIsIkxhdGVyYWxfU2VnbWVudF9SZWZlcmVuY2UiOiIiLCJBY2Nlc3NfUG9pbnQiOiIiLCJNYW5ob2xlX051bWJlciI6IjIwMjQ1NCIsIkFjY2Vzc19UeXBlIjoiIiwiQ292ZXJfU2hhcGUiOiIifX1dfQ==&lt;/opaqueElement&gt;&lt;/part&gt;&lt;/fileInspectWriteRequest&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" wikey="851769-BpAss8-BpSeq8.27-5" cat="2" to="vFeedStatus" label="InitRowStatus" state="1" type="1" n="140" sid="BpSeq8.27">
+      <message>Updated variable "vFeedStatus"</message>
+      <details>
+&lt;vFeedStatus&gt;&lt;vFeedStatus xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;SENT&lt;/vFeedStatus&gt;&lt;/vFeedStatus&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" wikey="851769-BpAss8-BpSeq8.27-5" cat="2" to="vFeedMessage" label="InitRowStatus" state="1" type="1" n="141" sid="BpSeq8.27">
+      <message>Updated variable "vFeedMessage"</message>
+      <details>
+&lt;vFeedMessage&gt;&lt;vFeedMessage xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;OK&lt;/vFeedMessage&gt;&lt;/vFeedMessage&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" wikey="851769-BpAss8-BpSeq8.27-5" cat="2" label="InitRowStatus" state="5" type="1" n="142" sid="BpSeq8.27">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" cat="1" psid="BpSeq8.27" label="PutVideos_AllTypes (599)" type="2" n="143" sid="BpScp3.28">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" cat="1" psid="BpScp3.28" label="tryBlock of scope PutVideos_AllTypes (599)" type="2" n="144" sid="BpTry4.29">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" cat="1" psid="BpTry4.29" label="sequence (620)" type="2" n="145" sid="BpSeq10.30">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" wikey="851769-BpAss11-BpSeq10.30-1" cat="2" to="vAuth" label="InitPutVideosHeaders" state="1" type="1" n="146" sid="BpSeq10.30">
+      <message>Updated variable "vAuth"</message>
+      <details>
+&lt;vAuth&gt;&lt;vAuth&gt;X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d&lt;/vAuth&gt;&lt;/vAuth&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" wikey="851769-BpAss11-BpSeq10.30-1" cat="2" to="vCT" label="InitPutVideosHeaders" state="1" type="1" n="147" sid="BpSeq10.30">
+      <message>Updated variable "vCT"</message>
+      <details>
+&lt;vCT&gt;&lt;vCT&gt;application/json&lt;/vCT&gt;&lt;/vCT&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" wikey="851769-BpAss11-BpSeq10.30-1" cat="2" to="vAccept" label="InitPutVideosHeaders" state="1" type="1" n="148" sid="BpSeq10.30">
+      <message>Updated variable "vAccept"</message>
+      <details>
+&lt;vAccept&gt;&lt;vAccept xmlns:def="http://www.w3.org/2001/XMLSchema" xsi:type="def:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;application/json&lt;/vAccept&gt;&lt;/vAccept&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" wikey="851769-BpAss11-BpSeq10.30-1" cat="2" label="InitPutVideosHeaders" state="5" type="1" n="149" sid="BpSeq10.30">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.759-07:00" cat="1" psid="BpSeq10.30" label="PickEndpointIf (635)" type="2" n="150" sid="BpIf2.31">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.760-07:00" wikey="851769-BpIf2_Nd-BpIf2.31-1" cat="2" label="PickEndpointIf" state="5" type="2" n="151" sid="BpIf2.31">
+      <message>ElseIf is selected. Condition is "normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionType)) = 'MACP'"</message>
+   </event>
+   <event date="2026-02-03T14:23:41.760-07:00" cat="1" psid="BpIf2.31" label="elseif (745)" type="2" n="152" sid="BpEli0.32">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.760-07:00" cat="1" psid="BpEli0.32" label="sequence (747)" type="2" n="153" sid="BpSeq12.33">
+      <message>_cr_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.760-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" to="putVideosMACP_In" label="BuildMACPRequest" state="1" type="1" n="154" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;vm:project_sid/&gt;
+                                &lt;vm:header&gt;
+                                  &lt;vm:InspectionID/&gt;&lt;vm:Surveyed_By/&gt;&lt;vm:Certificate_Number/&gt;
+                                  &lt;vm:Material/&gt;&lt;vm:Inspection_Status/&gt;
+                                  &lt;vm:Upstream_MH/&gt;&lt;vm:Downstream_MH/&gt;
+                                  &lt;vm:Pipe_Segment_Reference/&gt;&lt;vm:Lateral_Segment_Reference/&gt;
+                                  &lt;vm:Access_Point/&gt;&lt;vm:Manhole_Number/&gt;&lt;vm:Access_Type/&gt;&lt;vm:Cover_Shape/&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.761-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" to="putVideosMACP_In" label="BuildMACPRequest" state="1" type="1" n="155" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;vm:InspectionID/&gt;&lt;vm:Surveyed_By/&gt;&lt;vm:Certificate_Number/&gt;
+                                  &lt;vm:Material/&gt;&lt;vm:Inspection_Status/&gt;
+                                  &lt;vm:Upstream_MH/&gt;&lt;vm:Downstream_MH/&gt;
+                                  &lt;vm:Pipe_Segment_Reference/&gt;&lt;vm:Lateral_Segment_Reference/&gt;
+                                  &lt;vm:Access_Point/&gt;&lt;vm:Manhole_Number/&gt;&lt;vm:Access_Type/&gt;&lt;vm:Cover_Shape/&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.761-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" to="putVideosMACP_In" label="BuildMACPRequest" state="1" type="1" n="156" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;InspectionID&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/InspectionID&gt;&lt;vm:Surveyed_By/&gt;&lt;vm:Certificate_Number/&gt;
+                                  &lt;vm:Material/&gt;&lt;vm:Inspection_Status/&gt;
+                                  &lt;vm:Upstream_MH/&gt;&lt;vm:Downstream_MH/&gt;
+                                  &lt;vm:Pipe_Segment_Reference/&gt;&lt;vm:Lateral_Segment_Reference/&gt;
+                                  &lt;vm:Access_Point/&gt;&lt;vm:Manhole_Number/&gt;&lt;vm:Access_Type/&gt;&lt;vm:Cover_Shape/&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.761-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" to="putVideosMACP_In" label="BuildMACPRequest" state="1" type="1" n="157" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;InspectionID&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/InspectionID&gt;&lt;vm:Surveyed_By/&gt;&lt;vm:Certificate_Number/&gt;
+                                  &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vm:Inspection_Status/&gt;
+                                  &lt;vm:Upstream_MH/&gt;&lt;vm:Downstream_MH/&gt;
+                                  &lt;vm:Pipe_Segment_Reference/&gt;&lt;vm:Lateral_Segment_Reference/&gt;
+                                  &lt;vm:Access_Point/&gt;&lt;vm:Manhole_Number/&gt;&lt;vm:Access_Type/&gt;&lt;vm:Cover_Shape/&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.761-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" to="putVideosMACP_In" label="BuildMACPRequest" state="1" type="1" n="158" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;InspectionID&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/InspectionID&gt;&lt;vm:Surveyed_By/&gt;&lt;vm:Certificate_Number/&gt;
+                                  &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vm:Inspection_Status/&gt;
+                                  &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vm:Downstream_MH/&gt;
+                                  &lt;vm:Pipe_Segment_Reference/&gt;&lt;vm:Lateral_Segment_Reference/&gt;
+                                  &lt;vm:Access_Point/&gt;&lt;vm:Manhole_Number/&gt;&lt;vm:Access_Type/&gt;&lt;vm:Cover_Shape/&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.761-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" to="putVideosMACP_In" label="BuildMACPRequest" state="1" type="1" n="159" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;InspectionID&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/InspectionID&gt;&lt;vm:Surveyed_By/&gt;&lt;vm:Certificate_Number/&gt;
+                                  &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vm:Inspection_Status/&gt;
+                                  &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                  &lt;vm:Pipe_Segment_Reference/&gt;&lt;vm:Lateral_Segment_Reference/&gt;
+                                  &lt;vm:Access_Point/&gt;&lt;vm:Manhole_Number/&gt;&lt;vm:Access_Type/&gt;&lt;vm:Cover_Shape/&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.762-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" to="putVideosMACP_In" label="BuildMACPRequest" state="1" type="1" n="160" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;InspectionID&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/InspectionID&gt;&lt;vm:Surveyed_By/&gt;&lt;vm:Certificate_Number/&gt;
+                                  &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vm:Inspection_Status/&gt;
+                                  &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                  &lt;Pipe_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vm:Lateral_Segment_Reference/&gt;
+                                  &lt;vm:Access_Point/&gt;&lt;vm:Manhole_Number/&gt;&lt;vm:Access_Type/&gt;&lt;vm:Cover_Shape/&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.762-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" to="putVideosMACP_In" label="BuildMACPRequest" state="1" type="1" n="161" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;InspectionID&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/InspectionID&gt;&lt;vm:Surveyed_By/&gt;&lt;vm:Certificate_Number/&gt;
+                                  &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vm:Inspection_Status/&gt;
+                                  &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                  &lt;Pipe_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Lateral_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                  &lt;vm:Access_Point/&gt;&lt;vm:Manhole_Number/&gt;&lt;vm:Access_Type/&gt;&lt;vm:Cover_Shape/&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.762-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" to="putVideosMACP_In" label="BuildMACPRequest" state="1" type="1" n="162" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;InspectionID&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/InspectionID&gt;&lt;vm:Surveyed_By/&gt;&lt;vm:Certificate_Number/&gt;
+                                  &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vm:Inspection_Status/&gt;
+                                  &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                  &lt;Pipe_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Lateral_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                  &lt;vm:Access_Point/&gt;&lt;Manhole_Number&gt;202454&lt;/Manhole_Number&gt;&lt;vm:Access_Type/&gt;&lt;vm:Cover_Shape/&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.762-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" to="putVideosMACP_In" label="BuildMACPRequest" state="1" type="1" n="163" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;InspectionID&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/InspectionID&gt;&lt;vm:Surveyed_By/&gt;&lt;vm:Certificate_Number/&gt;
+                                  &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vm:Inspection_Status/&gt;
+                                  &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                  &lt;Pipe_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Lateral_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                  &lt;vm:Access_Point/&gt;&lt;Manhole_Number&gt;202454&lt;/Manhole_Number&gt;&lt;Access_Type xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vm:Cover_Shape/&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.762-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" to="putVideosMACP_In" label="BuildMACPRequest" state="1" type="1" n="164" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;InspectionID&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/InspectionID&gt;&lt;vm:Surveyed_By/&gt;&lt;vm:Certificate_Number/&gt;
+                                  &lt;Material xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;vm:Inspection_Status/&gt;
+                                  &lt;Upstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Downstream_MH xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                  &lt;Pipe_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Lateral_Segment_Reference xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                  &lt;vm:Access_Point/&gt;&lt;Manhole_Number&gt;202454&lt;/Manhole_Number&gt;&lt;Access_Type xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;&lt;Cover_Shape xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.762-07:00" wikey="851769-BpAss14-BpSeq12.33-1" cat="2" label="BuildMACPRequest" state="5" type="1" n="165" sid="BpSeq12.33">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.764-07:00" wikey="851769-BpAss15-BpSeq12.33-2" cat="2" to="putVideosMACP_In" label="CleanMACPRequest" state="1" type="1" n="166" sid="BpSeq12.33">
+      <message>Updated variable "putVideosMACP_In"</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;InspectionID&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/InspectionID&gt;
+                                  
+                                  
+                                  
+                                  &lt;Manhole_Number&gt;202454&lt;/Manhole_Number&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.764-07:00" wikey="851769-BpAss15-BpSeq12.33-2" cat="2" label="CleanMACPRequest" state="5" type="1" n="167" sid="BpSeq12.33">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.764-07:00" wikey="851769-BpInv6-BpSeq12.33-3" cat="2" label="InvokePutVideosMACP" state="1" type="2" n="168" sid="BpSeq12.33">
+      <message>Started invocation of operation "putVideosMACP" on partner "SewerAIVideos".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.764-07:00" wikey="851769-BpInv6-BpSeq12.33-3" cat="2" label="InvokePutVideosMACP" state="1" type="2" n="169" sid="BpSeq12.33">
+      <message>Sending property "rest.binding.http.Authorization", value is "X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.764-07:00" wikey="851769-BpInv6-BpSeq12.33-3" cat="2" label="InvokePutVideosMACP" state="1" type="2" n="170" sid="BpSeq12.33">
+      <message>Sending property "rest.binding.responseType", value is "empty".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.764-07:00" wikey="851769-BpInv6-BpSeq12.33-3" cat="2" label="InvokePutVideosMACP" state="1" type="2" n="171" sid="BpSeq12.33">
+      <message>Sending property "rest.binding.http.Accept", value is "application/json".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.764-07:00" wikey="851769-BpInv6-BpSeq12.33-3" cat="2" label="InvokePutVideosMACP" state="1" type="2" n="172" sid="BpSeq12.33">
+      <message>Sending property "rest.binding.http.Content-Type", value is "application/json".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.970-07:00" wikey="851769-BpInv6-BpSeq12.33-3" partnerWSDL="" cat="2" label="InvokePutVideosMACP" state="5" type="2" n="173" sid="BpSeq12.33">
+      <message>Invoked 1-way operation "putVideosMACP" on partner "SewerAIVideos".</message>
+      <details>
+&lt;putVideosMACP_In&gt;&lt;part name="request" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;VideosMACPRequest xmlns:vm="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request" xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"&gt;
+                              &lt;vm:items&gt;
+                                &lt;project_sid&gt;6caa1cf5-c92b-884a-8310-aeb02211367b&lt;/project_sid&gt;
+                                &lt;vm:header&gt;
+                                  &lt;InspectionID&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/InspectionID&gt;
+                                  
+                                  
+                                  
+                                  &lt;Manhole_Number&gt;202454&lt;/Manhole_Number&gt;
+                                &lt;/vm:header&gt;
+                              &lt;/vm:items&gt;
+                            &lt;/VideosMACPRequest&gt;&lt;/part&gt;&lt;/putVideosMACP_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.970-07:00" cat="1" type="2" n="174" sid="BpSeq12.33">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.970-07:00" cat="1" type="2" n="175" sid="BpEli0.32">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.970-07:00" cat="1" type="2" n="176" sid="BpIf2.31">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.970-07:00" cat="1" type="2" n="177" sid="BpSeq10.30">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.970-07:00" cat="1" type="2" n="178" sid="BpTry4.29">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.970-07:00" cat="1" type="2" n="179" sid="BpScp3.28">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.970-07:00" wikey="851769-BpAss19-BpSeq8.27-6" cat="2" to="UpdateCRInspectStatus_In" label="BuildUpdateCRInspectStatus" state="1" type="1" n="180" sid="BpSeq8.27">
+      <message>Updated variable "UpdateCRInspectStatus_In"</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;topUCS:inspectionid/&gt;
+                          &lt;topUCS:feedStatus/&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.970-07:00" wikey="851769-BpAss19-BpSeq8.27-6" cat="2" to="UpdateCRInspectStatus_In" label="BuildUpdateCRInspectStatus" state="1" type="1" n="181" sid="BpSeq8.27">
+      <message>Updated variable "UpdateCRInspectStatus_In"</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;inspectionid&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/inspectionid&gt;
+                          &lt;topUCS:feedStatus/&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.971-07:00" wikey="851769-BpAss19-BpSeq8.27-6" cat="2" to="UpdateCRInspectStatus_In" label="BuildUpdateCRInspectStatus" state="1" type="1" n="182" sid="BpSeq8.27">
+      <message>Updated variable "UpdateCRInspectStatus_In"</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;inspectionid&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/inspectionid&gt;
+                          &lt;topUCS:feedStatus&gt;SENT&lt;/topUCS:feedStatus&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.971-07:00" wikey="851769-BpAss19-BpSeq8.27-6" cat="2" label="BuildUpdateCRInspectStatus" state="5" type="1" n="183" sid="BpSeq8.27">
+      <message>Completed assign</message>
+   </event>
+   <event date="2026-02-03T14:23:41.971-07:00" wikey="851769-BpInv8-BpSeq8.27-7" cat="2" label="InvokeUpdateCRInspectStatus" state="1" type="2" n="184" sid="BpSeq8.27">
+      <message>Started invocation of operation "update" on partner "UpdateCRInspectStatus".</message>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" wikey="851769-BpInv8-BpSeq8.27-7" partnerWSDL="" cat="2" label="InvokeUpdateCRInspectStatus" state="5" type="2" n="185" sid="BpSeq8.27">
+      <message>Invoked 1-way operation "update" on partner "UpdateCRInspectStatus".</message>
+      <details>
+&lt;UpdateCRInspectStatus_In&gt;&lt;part name="EpseweraiCrInspectCollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;&lt;EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus" xmlns="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus"&gt;
+                        &lt;topUCS:EpseweraiCrInspect&gt;
+                          &lt;inspectionid&gt;d3a39f73-7017-f643-a541-122b0591b8a5&lt;/inspectionid&gt;
+                          &lt;topUCS:feedStatus&gt;SENT&lt;/topUCS:feedStatus&gt;
+                        &lt;/topUCS:EpseweraiCrInspect&gt;
+                      &lt;/EpseweraiCrInspectCollection&gt;&lt;/part&gt;&lt;/UpdateCRInspectStatus_In&gt;</details>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" cat="1" type="2" n="186" sid="BpSeq8.27">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" cat="1" type="2" n="187" sid="BpIf1.26">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" cat="1" type="2" n="188" sid="BpSeq7.25">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" cat="1" type="2" n="189" sid="BpTry3.24">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" cat="1" type="2" n="190" sid="BpScp2.23">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" cat="1" type="2" n="191" sid="BpFrE0.12">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" cat="1" type="2" n="192" sid="BpSeq5.11">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" cat="1" type="2" n="193" sid="BpIf0.10">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" cat="1" type="2" n="194" sid="BpSeq4.9">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" cat="1" type="2" n="195" sid="BpTry2.8">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.975-07:00" cat="1" type="2" n="196" sid="BpScp1.7">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.976-07:00" cat="1" type="2" n="197" sid="BpSeq2.6">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.976-07:00" cat="1" type="2" n="198" sid="BpTry1.5">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.976-07:00" cat="1" type="2" n="199" sid="BpScp0.4">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.976-07:00" cat="1" type="2" n="200" sid="BpSeq0.3">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.976-07:00" cat="1" type="2" n="201" sid="BpTry0.2">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.976-07:00" cat="1" type="2" n="202" sid="BpPrc0.1">
+      <message>_cl_</message>
+   </event>
+   <event date="2026-02-03T14:23:41.976-07:00" cat="2" type="2" n="203" sid="BpPrc0.1">
+      <message>BPEL process instance "851769" completed</message>
+   </event>
+</audit_trail>
