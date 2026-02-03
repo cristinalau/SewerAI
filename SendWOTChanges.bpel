@@ -507,7 +507,7 @@ try {
                               <to>$vFeedStatus</to>
                             </copy>
                             <copy>
-                              <from>"Invoke SewerAIVideos failed."</from>
+                              <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">(string-length(normalize-space($vFeedMessage)) &gt; 0 and $vFeedMessage) or 'Invoke SewerAIVideos failed.'</from>
                               <to>$vFeedMessage</to>
                             </copy>
                           </assign>
@@ -602,8 +602,16 @@ try {
                                 <sequence>
                                   <assign name="CapturePutVideosFault">
                                     <copy>
-                                      <from>$fault</from>
-                                      <to variable="vPutVideosFault"/>
+                                    <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
+                                          substring(string($fault), 1, 1000)
+                                    </from>
+                                    <to variable="vPutVideosFault"/>
+                                    </copy>
+                                  </assign>
+                                  <assign name="SetFeedMessageFromPutVideosFault">
+                                    <copy>
+                                      <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('PutVideos failed: http=', $vPutVideosStatusCode,'; fault=', substring($vPutVideosFault, 1, 1000))</from>
+                                      <to>$vFeedMessage</to>
                                     </copy>
                                   </assign>
                                   <rethrow/>
@@ -612,6 +620,10 @@ try {
                             </faultHandlers>
                             <sequence>
                               <assign name="InitPutVideosHeaders">
+                                <copy>
+                                  <from>'X-SAI 85370e3c0aad4f1bc54b52eab1b48c90a159b42d'</from>
+                                  <to>$vAuth</to>
+                                </copy>
                                 <copy>
                                   <from>'application/json'</from>
                                   <to>$vCT</to>
