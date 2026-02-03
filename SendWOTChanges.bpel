@@ -507,7 +507,7 @@ try {
                               <to>$vFeedStatus</to>
                             </copy>
                             <copy>
-                              <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">(string-length(normalize-space($vFeedMessage)) &gt; 0 and $vFeedMessage) or 'Invoke SewerAIVideos failed.'</from>
+                              <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">(string-length(normalize-space($vFeedMessage)) &gt; 0 and $vFeedMessage)or 'Invoke SewerAIVideos failed.'</from>
                               <to>$vFeedMessage</to>
                             </copy>
                           </assign>
@@ -601,16 +601,15 @@ try {
                               <catchAll>
                                 <sequence>
                                   <assign name="CapturePutVideosFault">
-                                    <copy>
-                                    <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
-                                          substring(string($fault), 1, 1000)
-                                    </from>
-                                    <to variable="vPutVideosFault"/>
-                                    </copy>
+                                      <copy>
+                                      <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">substring(string($fault), 1, 1000)
+                                      </from>
+                                      <to variable="vPutVideosFault"/>
+                                      </copy>
                                   </assign>
                                   <assign name="SetFeedMessageFromPutVideosFault">
                                     <copy>
-                                      <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('PutVideos failed: http=', $vPutVideosStatusCode,'; fault=', substring($vPutVideosFault, 1, 1000))</from>
+                                      <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat('PutVideos failed: http=', $vPutVideosStatusCode,'; fault=', substring($vPutVideosFault, 1, 1000))</from>                                      
                                       <to>$vFeedMessage</to>
                                     </copy>
                                   </assign>
