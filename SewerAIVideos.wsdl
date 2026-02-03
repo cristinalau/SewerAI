@@ -1,0 +1,64 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="SewerAIVideos"
+     targetNamespace="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIVideos"
+     xmlns:tns="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIVideos"
+     xmlns:inp1="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"
+     xmlns:inp2="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIVideos"
+     xmlns:inp3="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"
+     xmlns:inp4="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIVideos"
+     xmlns:inp5="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"
+     xmlns:inp6="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIVideos"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    >
+    <plnk:partnerLinkType name="SewerAIVideos">
+        <plnk:role name="SewerAIVideosProvider" portType="tns:SewerAIVideos_ptt"/>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request"
+                 schemaLocation="../Schemas/VideosLACPRequest.xsd"/>
+        </xsd:schema>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://xmlns.oracle.com/Ivara12c/IvaraToSewerAI/SewerAIVideos"
+             elementFormDefault="qualified">
+            <element name="empty">
+                <complexType/>
+            </element>
+        </schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://TargetNamespace.com/SewerAIProjects_putVideosMACP_request"
+                 schemaLocation="../Schemas/VideosMACPRequest.xsd"/>
+        </xsd:schema>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://TargetNamespace.com/SewerAIProjects_putVideosPACP_request"
+                 schemaLocation="../Schemas/VideosPACPRequest.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="putVideosLACP_inputMessage">
+        <wsdl:part name="request" element="inp1:VideosLACPRequest"/>
+    </wsdl:message>
+    <wsdl:message name="Rest_EmptyMessage">
+        <wsdl:part name="Empty" element="tns:empty"/>
+    </wsdl:message>
+    <wsdl:message name="putVideosMACP_inputMessage">
+        <wsdl:part name="request" element="inp3:VideosMACPRequest"/>
+    </wsdl:message>
+    <wsdl:message name="putVideosPACP_inputMessage">
+        <wsdl:part name="request" element="inp5:VideosPACPRequest"/>
+    </wsdl:message>
+    <wsdl:portType name="SewerAIVideos_ptt">
+        <wsdl:operation name="putVideosLACP">
+            <wsdl:input message="tns:putVideosLACP_inputMessage"/>
+            <wsdl:output message="tns:Rest_EmptyMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="putVideosMACP">
+            <wsdl:input message="tns:putVideosMACP_inputMessage"/>
+            <wsdl:output message="tns:Rest_EmptyMessage"/>
+        </wsdl:operation>
+        <wsdl:operation name="putVideosPACP">
+            <wsdl:input message="tns:putVideosPACP_inputMessage"/>
+            <wsdl:output message="tns:Rest_EmptyMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>
