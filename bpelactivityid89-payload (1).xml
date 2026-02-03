@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><putVideosLACP_In>
+   <part xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="request">
+      <VideosLACPRequest xmlns="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request" xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request">
+                            <vl:items>
+                              <project_sid>6caa1cf5-c92b-884a-8310-aeb02211367b</project_sid>
+                              <vl:header>
+                                <InspectionID>a521bb0f-a46d-8049-acb4-dc96ad112937</InspectionID>
+               <vl:Surveyed_By/>
+               <vl:Certificate_Number/>
+                                <Material xsi:nil="true"/>
+               <vl:Inspection_Status/>
+                                <Upstream_MH xsi:nil="true"/>
+               <Downstream_MH xsi:nil="true"/>
+                                <Pipe_Segment_Reference xsi:nil="true"/>
+               <Lateral_Segment_Reference>N-100024</Lateral_Segment_Reference>
+                                <vl:Access_Point/>
+               <Manhole_Number xsi:nil="true"/>
+               <Access_Type xsi:nil="true"/>
+               <Cover_Shape xsi:nil="true"/>
+                              </vl:header>
+                            </vl:items>
+                          </VideosLACPRequest>
+   </part>
+</putVideosLACP_In>
