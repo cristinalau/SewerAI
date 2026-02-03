@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><bpelFault>
+   <faultType>0</faultType>
+   <subLanguageExecutionFault xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable">
+      <part name="summary">
+         <summary>An error occurs while processing the XPath expression; the expression is ora:processXSLT('xsl/StripNilElements.xsl', $putVideosLACP_In.request)</summary>
+      </part>
+      <part name="code">
+         <code>XPath expression failed to execute</code>
+      </part>
+      <part name="detail">
+         <detail>XPath expression failed to execute.
+An error occurs while processing the XPath expression; the expression is ora:processXSLT('xsl/StripNilElements.xsl', $putVideosLACP_In.request)
+The XPath expression failed to execute; the reason was: oracle.fabric.common.FabricException: Error in getting XML input stream: oramds:/deployed-composites/Ivara12c/IvaraToSewerAI_rev1.0/xsl/StripNilElements.xsl: oracle.mds.core.MetadataNotFoundException: MDS-00013: no metadata found for metadata object "/deployed-composites/Ivara12c/IvaraToSewerAI_rev1.0/xsl/StripNilElements.xsl" 
+MDS-00201: PDocument not found in MetadataStore : [store-type=DBMetadataStore app-name=soa-infra repository-name=mds-soa partition-name=soa-infra] 
+Check the detailed root cause described in the exception message text and verify that the XPath query is correct.
+</detail>
+      </part>
+   </subLanguageExecutionFault>
+</bpelFault>
