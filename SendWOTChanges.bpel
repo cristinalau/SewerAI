@@ -521,7 +521,7 @@ try {
                         <sequence>
                           <!-- 3.A Build JSON identical to the POST body (FOR CURRENT ROW) -->
                           <assign name="BuildInspectJson" bpelx:insertMissingToData="yes"
-                                  xmlns:bpelx="http://schemas.oracle.com/bpel/extension">
+                                  xmlns:bpelx="http://schemas.oracle.com/bpel/extension" bpelx:ignoreMissingFromData="yes">
                             <copy>
                               <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat(
                       '{',
@@ -533,7 +533,7 @@ try {
                             '"Surveyed_By":"",',
                             '"Certificate_Number":"",',
                             '"Material":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:material)),'",',
-                            '"Additional_Info":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:additionalInformation)),'",',
+                            '"Additional_Info":"',normalize-space(translate(translate(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:additionalInformation), '\"', ''), '&#x0D;&#x0A;', '  ')),'",',
                             '"Inspection_Status":"",',
                             '"Upstream_MH":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:upstreamMh)),'",',
                             '"Downstream_MH":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:downstreamMh)),'",',
@@ -541,7 +541,7 @@ try {
                             '"Lateral_Segment_Reference":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:lateralSegmentReference)),'",',
                             '"Access_Point":"",',
                             '"Manhole_Number":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:manholeNumber)),'",',
-                            '"Pipe_Use":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType)),'",',
+                            '"Pipe_Use":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:pipeUse)),'",',
                             '"Cover_Shape":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:coverShape)),'"',
                             '}',
                         '}]',
@@ -631,7 +631,7 @@ try {
                                 <condition>normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionType)) = 'LACP'</condition>
                                 <sequence>
                                   <assign name="BuildLACPRequest" xmlns:bpelx="http://schemas.oracle.com/bpel/extension"
-                                          bpelx:insertMissingToData="yes">
+                                          bpelx:insertMissingToData="yes" bpelx:ignoreMissingFromData="yes">
                                     <!-- 1) Seed the request with the correct wrapper at the PART ROOT -->
                                     <!-- 2) Map DB → LACP (CURRENT ROW: filtered[$i]) -->
                                     <copy>
@@ -641,7 +641,7 @@ try {
                               <vl:header>
                                 <vl:InspectionID/><vl:Surveyed_By/><vl:Certificate_Number/>
                                 <vl:Material/><vl:Inspection_Status/>
-                                <vl:Additional_Information/>
+                                <vl:Additional_Info/>
                                 <vl:Upstream_MH/><vl:Downstream_MH/>
                                 <vl:Pipe_Segment_Reference/><vl:Lateral_Segment_Reference/>
                                 <vl:Access_Point/><vl:Manhole_Number/><vl:Pipe_Use/><vl:Cover_Shape/>
@@ -670,7 +670,7 @@ try {
                                     </copy>
                                     <copy>
                                       <from>$InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:additionalInformation</from>
-                                      <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$putVideosLACP_In.request/vl:items/vl:header/vl:Additional_Information</to>
+                                      <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$putVideosLACP_In.request/vl:items/vl:header/vl:Additional_Info</to>
                                     </copy>
                                     <copy>
                                       <from>
@@ -704,7 +704,7 @@ try {
                                     </copy>
                                     <copy>
                                       <from>
-                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType
+                        $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:pipeUse
                       </from>
                                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Pipe_Use</to>
                                     </copy>
@@ -742,7 +742,7 @@ try {
                                   <condition>normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionType)) = 'MACP'</condition>
                                   <sequence>
                                     <assign name="BuildMACPRequest" bpelx:insertMissingToData="yes"
-                                            xmlns:bpelx="http://schemas.oracle.com/bpel/extension">
+                                            xmlns:bpelx="http://schemas.oracle.com/bpel/extension" bpelx:ignoreMissingFromData="yes">
                                       <copy>
                                         <from>
                           <literal xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable">
@@ -752,7 +752,7 @@ try {
                                 <vm:header>
                                   <vm:InspectionID/><vm:Surveyed_By/><vm:Certificate_Number/>
                                   <vm:Material/><vm:Inspection_Status/>
-                                  <vm:Additional_Information/>
+                                  <vm:Additional_Info/>
                                   <vm:Upstream_MH/><vm:Downstream_MH/>
                                   <vm:Pipe_Segment_Reference/><vm:Lateral_Segment_Reference/>
                                   <vm:Access_Point/><vm:Manhole_Number/><vm:Pipe_Use/><vm:Cover_Shape/>
@@ -783,7 +783,7 @@ try {
                                       </copy>
                                       <copy>
                                         <from>$InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:additionalInformation</from>
-                                        <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$putVideosMACP_In.request/vm:items/vm:header/vm:Additional_Information</to>
+                                        <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$putVideosMACP_In.request/vm:items/vm:header/vm:Additional_Info</to>
                                       </copy>
                                       <copy>
                                         <from>
@@ -817,7 +817,7 @@ try {
                                       </copy>
                                       <copy>
                                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:pipeUse
                         </from>
                                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Pipe_Use</to>
                                       </copy>
@@ -855,7 +855,7 @@ try {
                                   <condition>normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionType)) = 'PACP'</condition>
                                   <sequence>
                                     <assign name="BuildPACPRequest" bpelx:insertMissingToData="yes"
-                                            xmlns:bpelx="http://schemas.oracle.com/bpel/extension">
+                                            xmlns:bpelx="http://schemas.oracle.com/bpel/extension" bpelx:ignoreMissingFromData="yes">
                                       <copy>
                                         <from>
                           <literal xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable">
@@ -865,7 +865,7 @@ try {
                                 <vp:header>
                                   <vp:InspectionID/><vp:Surveyed_By/><vp:Certificate_Number/>
                                   <vp:Material/><vp:Inspection_Status/>
-                                  <vp:Additional_Information/>
+                                  <vp:Additional_Info/>
                                   <vp:Upstream_MH/><vp:Downstream_MH/>
                                   <vp:Pipe_Segment_Reference/><vp:Lateral_Segment_Reference/>
                                   <vp:Access_Point/><vp:Manhole_Number/><vp:Pipe_Use/><vp:Cover_Shape/>
@@ -896,7 +896,7 @@ try {
                                       </copy>
                                       <copy>
                                         <from>$InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:additionalInformation</from>
-                                        <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$putVideosPACP_In.request/vp:items/vp:header/vp:Additional_Information</to>
+                                        <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$putVideosPACP_In.request/vp:items/vp:header/vp:Additional_Info</to>
                                       </copy>
                                       <copy>
                                         <from>
@@ -930,7 +930,7 @@ try {
                                       </copy>
                                       <copy>
                                         <from>
-                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType
+                          $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:pipeUse
                         </from>
                                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Pipe_Use</to>
                                       </copy>
