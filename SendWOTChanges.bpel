@@ -523,8 +523,7 @@ try {
                           <assign name="BuildInspectJson" bpelx:insertMissingToData="yes"
                                   xmlns:bpelx="http://schemas.oracle.com/bpel/extension">
                             <copy>
-                              <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
-                    concat(
+                              <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">concat(
                       '{',
                         '"items":[{',
                           '"project_sid":"',
@@ -534,6 +533,7 @@ try {
                             '"Surveyed_By":"",',
                             '"Certificate_Number":"",',
                             '"Material":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:material)),'",',
+                            '"Additional_Info":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:additionalInformation)),'",',
                             '"Inspection_Status":"",',
                             '"Upstream_MH":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:upstreamMh)),'",',
                             '"Downstream_MH":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:downstreamMh)),'",',
@@ -541,44 +541,39 @@ try {
                             '"Lateral_Segment_Reference":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:lateralSegmentReference)),'",',
                             '"Access_Point":"",',
                             '"Manhole_Number":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:manholeNumber)),'",',
-                            '"Access_Type":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType)),'",',
+                            '"Pipe_Use":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType)),'",',
                             '"Cover_Shape":"',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:coverShape)),'"',
                             '}',
                         '}]',
                       '}'
-                    )
-                  </from>
+                    )</from>
                               <to>$vInspectJson</to>
                             </copy>
                           </assign>
                           <!-- 3.B Build opaque + set per-file name, then write JSON to disk -->
                           <extensionActivity>
                             <bpelx:exec name="SetInspectOpaque">
-                              <![CDATA[
-                  try {
-                    String json = (String)getVariableData("vInspectJson");
-                    if (json == null) json = "{}";
-                    String base64 = java.util.Base64.getEncoder().encodeToString(json.getBytes("UTF-8"));
-                    setVariableData("fileInspectWriteRequest", "opaque", "/opaque:opaqueElement", base64);
-                  } catch (Throwable t) {
-                    addAuditTrailEntry("SetInspectOpaque error: " + t.getMessage());
-                    throw new RuntimeException(t);
-                  }
-                ]]>
+                              <![CDATA[try { 
+                    String json = (String)getVariableData("vInspectJson"); 
+                    if (json == null) json = "{}"; 
+                    String base64 = java.util.Base64.getEncoder().encodeToString(json.getBytes("UTF-8")); 
+                    setVariableData("fileInspectWriteRequest", "opaque", "/opaque:opaqueElement", base64); 
+                  } catch (Throwable t) { 
+                    addAuditTrailEntry("SetInspectOpaque error: " + t.getMessage()); 
+                    throw new RuntimeException(t); 
+                  }]]>
                             </bpelx:exec>
                           </extensionActivity>
                           <assign name="SetOutFileName" bpelx:insertMissingToData="yes"
                                   xmlns:bpelx="http://schemas.oracle.com/bpel/extension">
                             <copy>
-                              <from>
-                    concat('inspect_', $vProjectSid, '_',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionid)),'.json')
-                  </from>
+                              <from>concat('inspect_', $vProjectSid, '_',normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionid)),'.json')</from>
                               <to>$vOutFileName</to>
                             </copy>
                           </assign>
                           <invoke name="WriteInspectJson" partnerLink="ExportInspectUpdate_sp" portType="fw2:Write_ptt"
-                                  operation="Write" inputVariable="fileInspectWriteRequest" bpelx:invokeAsDetail="yes"
-                                  xmlns:bpelx="http://schemas.oracle.com/bpel/extension">
+                                  operation="Write" inputVariable="fileInspectWriteRequest"
+                                  xmlns:bpelx="http://schemas.oracle.com/bpel/extension" bpelx:invokeAsDetail="yes">
                             <bpelx:toProperties>
                               <bpelx:toProperty name="jca.file.FileName" variable="vOutFileName"/>
                             </bpelx:toProperties>
@@ -587,7 +582,7 @@ try {
                           <assign name="InitRowStatus" bpelx:insertMissingToData="yes"
                                   xmlns:bpelx="http://schemas.oracle.com/bpel/extension">
                             <copy>
-                              <from>'SENT'</from>
+                              <from><literal xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable">SENT</literal></from>
                               <to>$vFeedStatus</to>
                             </copy>
                             <copy>
@@ -638,26 +633,23 @@ try {
                                   <assign name="BuildLACPRequest" xmlns:bpelx="http://schemas.oracle.com/bpel/extension"
                                           bpelx:insertMissingToData="yes">
                                     <!-- 1) Seed the request with the correct wrapper at the PART ROOT -->
+                                    <!-- 2) Map DB → LACP (CURRENT ROW: filtered[$i]) -->
                                     <copy>
-                                      <from>
-                        <literal xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable">
-                          <vl:VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request">
+                                      <from><literal xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"><vl:VideosLACPRequest xmlns:vl="http://TargetNamespace.com/SewerAIProjects_putVideosLACP_request">
                             <vl:items>
                               <vl:project_sid/>
                               <vl:header>
                                 <vl:InspectionID/><vl:Surveyed_By/><vl:Certificate_Number/>
                                 <vl:Material/><vl:Inspection_Status/>
+                                <vl:Additional_Information/>
                                 <vl:Upstream_MH/><vl:Downstream_MH/>
                                 <vl:Pipe_Segment_Reference/><vl:Lateral_Segment_Reference/>
-                                <vl:Access_Point/><vl:Manhole_Number/><vl:Access_Type/><vl:Cover_Shape/>
+                                <vl:Access_Point/><vl:Manhole_Number/><vl:Pipe_Use/><vl:Cover_Shape/>
                               </vl:header>
                             </vl:items>
-                          </vl:VideosLACPRequest>
-                        </literal>
-                      </from>
+                          </vl:VideosLACPRequest></literal></from>
                                       <to>$putVideosLACP_In.request</to>
                                     </copy>
-                                    <!-- 2) Map DB → LACP (CURRENT ROW: filtered[$i]) -->
                                     <copy>
                                       <from>
                         $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:projectSid
@@ -675,6 +667,10 @@ try {
                         $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:material
                       </from>
                                       <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Material</to>
+                                    </copy>
+                                    <copy>
+                                      <from>$InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:additionalInformation</from>
+                                      <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$putVideosLACP_In.request/vl:items/vl:header/vl:Additional_Information</to>
                                     </copy>
                                     <copy>
                                       <from>
@@ -710,7 +706,7 @@ try {
                                       <from>
                         $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType
                       </from>
-                                      <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Access_Type</to>
+                                      <to>$putVideosLACP_In.request/vl:items/vl:header/vl:Pipe_Use</to>
                                     </copy>
                                     <copy>
                                       <from>
@@ -756,9 +752,10 @@ try {
                                 <vm:header>
                                   <vm:InspectionID/><vm:Surveyed_By/><vm:Certificate_Number/>
                                   <vm:Material/><vm:Inspection_Status/>
+                                  <vm:Additional_Information/>
                                   <vm:Upstream_MH/><vm:Downstream_MH/>
                                   <vm:Pipe_Segment_Reference/><vm:Lateral_Segment_Reference/>
-                                  <vm:Access_Point/><vm:Manhole_Number/><vm:Access_Type/><vm:Cover_Shape/>
+                                  <vm:Access_Point/><vm:Manhole_Number/><vm:Pipe_Use/><vm:Cover_Shape/>
                                 </vm:header>
                               </vm:items>
                             </vm:VideosMACPRequest>
@@ -783,6 +780,10 @@ try {
                           $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:material
                         </from>
                                         <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Material</to>
+                                      </copy>
+                                      <copy>
+                                        <from>$InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:additionalInformation</from>
+                                        <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$putVideosMACP_In.request/vm:items/vm:header/vm:Additional_Information</to>
                                       </copy>
                                       <copy>
                                         <from>
@@ -818,7 +819,7 @@ try {
                                         <from>
                           $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType
                         </from>
-                                        <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Access_Type</to>
+                                        <to>$putVideosMACP_In.request/vm:items/vm:header/vm:Pipe_Use</to>
                                       </copy>
                                       <copy>
                                         <from>
@@ -864,9 +865,10 @@ try {
                                 <vp:header>
                                   <vp:InspectionID/><vp:Surveyed_By/><vp:Certificate_Number/>
                                   <vp:Material/><vp:Inspection_Status/>
+                                  <vp:Additional_Information/>
                                   <vp:Upstream_MH/><vp:Downstream_MH/>
                                   <vp:Pipe_Segment_Reference/><vp:Lateral_Segment_Reference/>
-                                  <vp:Access_Point/><vp:Manhole_Number/><vp:Access_Type/><vp:Cover_Shape/>
+                                  <vp:Access_Point/><vp:Manhole_Number/><vp:Pipe_Use/><vp:Cover_Shape/>
                                 </vp:header>
                               </vp:items>
                             </vp:VideosPACPRequest>
@@ -891,6 +893,10 @@ try {
                           $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:material
                         </from>
                                         <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Material</to>
+                                      </copy>
+                                      <copy>
+                                        <from>$InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:additionalInformation</from>
+                                        <to expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">$putVideosPACP_In.request/vp:items/vp:header/vp:Additional_Information</to>
                                       </copy>
                                       <copy>
                                         <from>
@@ -926,7 +932,7 @@ try {
                                         <from>
                           $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:accessType
                         </from>
-                                        <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Access_Type</to>
+                                        <to>$putVideosPACP_In.request/vp:items/vp:header/vp:Pipe_Use</to>
                                       </copy>
                                       <copy>
                                         <from>
@@ -983,35 +989,107 @@ try {
                                   xmlns:bpelx="http://schemas.oracle.com/bpel/extension"
                                   bpelx:insertMissingToData="yes">
                             <!-- Skeleton at part root -->
+                            <!-- Populate the values (text nodes) for THIS row -->
                             <copy>
-                              <from>
-                    <literal xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable">
-                      <topUCS:EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus">
+                              <from><literal xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"><topUCS:EpseweraiCrInspectCollection xmlns:topUCS="http://xmlns.oracle.com/pcbpel/adapter/db/top/UpdateCRInspectStatus">
                         <topUCS:EpseweraiCrInspect>
+                          <topUCS:projectSid/>
                           <topUCS:inspectionid/>
                           <topUCS:feedStatus/>
                         </topUCS:EpseweraiCrInspect>
-                      </topUCS:EpseweraiCrInspectCollection>
-                    </literal>
-                  </from>
+                      </topUCS:EpseweraiCrInspectCollection></literal></from>
                               <to>$UpdateCRInspectStatus_In.EpseweraiCrInspectCollection</to>
                             </copy>
-                            <!-- Populate the values (text nodes) for THIS row -->
                             <copy>
-                              <from>
-                    $InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionid
-                  </from>
-                              <to>
-                    $UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:inspectionid
-                  </to>
+                              <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
+                                xp20:upper-case(translate(normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:projectSid)),'-', ''))
+                              </from>
+                              <to>$UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:projectSid</to>
                             </copy>
                             <copy>
-                              <from>$vFeedStatus</from>
-                              <to>
-                    $UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:feedStatus
-                  </to>
+                              <from expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath1.0">
+                                xp20:upper-case(translate(normalize-space(string($InvokeReadCRInspect_ReadCRInspectSelect_OutputVariable.VCrInspectToSendCollection/topCRI:VCrInspectToSend[normalize-space(topCRI:projectSid)=normalize-space($vProjectSid)][$i]/topCRI:inspectionid)),'-', ''))
+                              </from>
+                              <to>$UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:inspectionid</to>
+                            </copy>
+                            <copy>
+                              <from>'SENT'</from>
+                              <to>$UpdateCRInspectStatus_In.EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:feedStatus</to>
                             </copy>
                           </assign>
+                          <extensionActivity>
+                            <bpelx:exec name="HexToRawForUpdate">
+                              <![CDATA[
+                              try {
+                                // 1) Read current element values as DOM nodes, then get text
+                                org.w3c.dom.Node projNode = (org.w3c.dom.Node)getVariableData(
+                                  "UpdateCRInspectStatus_In",
+                                  "EpseweraiCrInspectCollection",
+                                  "/topUCS:EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:projectSid"
+                                );
+                                org.w3c.dom.Node inspNode = (org.w3c.dom.Node)getVariableData(
+                                  "UpdateCRInspectStatus_In",
+                                  "EpseweraiCrInspectCollection",
+                                  "/topUCS:EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:inspectionid"
+                                );
+                          
+                                String projText = (projNode == null ? null : projNode.getTextContent());
+                                String inspText = (inspNode == null ? null : inspNode.getTextContent());
+                          
+                                // 2) Normalize (trim + remove hyphens)
+                                if (projText != null) projText = projText.trim().replace("-", "");
+                                if (inspText != null) inspText = inspText.trim().replace("-", "");
+                          
+                                // 3) Validate (RAW(16) => 32 hex chars)
+                                if (projText == null || projText.length() != 32 ||
+                                    inspText == null || inspText.length() != 32) {
+                                  addAuditTrailEntry("HexToRawForUpdate: invalid hex: proj=" + projText + ", insp=" + inspText);
+                                  throw new RuntimeException("Invalid RAW(16) hex value.");
+                                }
+                          
+                                // 4) Convert hex → 16 bytes (inline; no method declarations in Java Embedding)
+                                byte[] projBytes = new byte[16];
+                                byte[] inspBytes = new byte[16];
+                                for (int i = 0; i < 16; i++) {
+                                  int hi = Character.digit(projText.charAt(2*i), 16);
+                                  int lo = Character.digit(projText.charAt(2*i+1), 16);
+                                  if (hi < 0 || lo < 0) throw new RuntimeException("Non-hex in projectSid at pos " + (2*i));
+                                  projBytes[i] = (byte)((hi << 4) + lo);
+                          
+                                  hi = Character.digit(inspText.charAt(2*i), 16);
+                                  lo = Character.digit(inspText.charAt(2*i+1), 16);
+                                  if (hi < 0 || lo < 0) throw new RuntimeException("Non-hex in inspectionid at pos " + (2*i));
+                                  inspBytes[i] = (byte)((hi << 4) + lo);
+                                }
+                          
+                                // 5) Base64 encode (SOA serializes byte[] as base64Binary in XML)
+                                String projB64 = java.util.Base64.getEncoder().encodeToString(projBytes);
+                                String inspB64 = java.util.Base64.getEncoder().encodeToString(inspBytes);
+                                addAuditTrailEntry("HexToRawForUpdate: projB64.len=" + projB64.length() +
+                                                   ", inspB64.len=" + inspB64.length());
+                          
+                                // 6) Write back into the message (the adapter will bind these as RAW)
+                                setVariableData(
+                                  "UpdateCRInspectStatus_In",
+                                  "EpseweraiCrInspectCollection",
+                                  "/topUCS:EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:projectSid",
+                                  projB64
+                                );
+                                setVariableData(
+                                  "UpdateCRInspectStatus_In",
+                                  "EpseweraiCrInspectCollection",
+                                  "/topUCS:EpseweraiCrInspectCollection/topUCS:EpseweraiCrInspect/topUCS:inspectionid",
+                                  inspB64
+                                );
+                          
+                                addAuditTrailEntry("HexToRawForUpdate: keys converted to base64Binary for RAW(16).");
+                              } catch (Throwable t) {
+                                addAuditTrailEntry("HexToRawForUpdate ERROR: " + t.getMessage());
+                                throw new RuntimeException(t);
+                              }
+                            ]]>
+                            </bpelx:exec>
+                          </extensionActivity>
                           <!-- Now actually call the DB adapter -->
                           <invoke name="InvokeUpdateCRInspectStatus" partnerLink="UpdateCRInspectStatus"
                                   portType="uc:UpdateCRInspectStatus_ptt" operation="update"
